@@ -3,301 +3,527 @@
 @section('head_and_title')
     <meta name="description" content="Home Page">
     <meta name="author" content="PT. Generasi Muda Gigih">
-    <meta name="keywords" content="Property, Office, Residence, Apartment, House">
+    <meta name="keywords" content="Pajak, Tax, Money, Uang">
 
-    <title>F.O.R - Facilitated Office Residence</title>
+    <title>Urus Pajak</title>
 @endsection
 
 @section('content')
-    <!-- Jumbotron Header -->
-    {{--<header class="jumbotron my-4">--}}
-        {{--<h1 class="display-3">A Warm Welcome!</h1>--}}
-        {{--<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>--}}
-        {{--<a href="#" class="btn btn-primary btn-lg">Call to action!</a>--}}
-    {{--</header>--}}
-
-    <div class="row mb-2 for-mt-10">
-        <div class="col-lg-9 col-md-9 col-12 px-md-1">
-            <div class="card home-banner-responsive">
-                <div id="slide_1" class="card-body" style="background-image: url('{{ asset('images/frontend/home/home-main-banner.jpg') }}');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;">
+    <!-- start banner Area -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row fullscreen align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6 banner-left">
+                    <h6>This is me</h6>
+                    <h1>Philip Gilbert</h1>
+                    <p>
+                        You will begin to realise why this exercise is called the Dickens Pattern with reference to the ghost showing Scrooge some different futures.
+                    </p>
+                    <a href="#" class="primary-btn text-uppercase">discover now</a>
                 </div>
-                <div id="slide_2" class="card-body" style="background-image: url('{{ asset('images/frontend/home/home-video.jpg') }}');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                        display: none;">
-                </div>
-                <div id="slide_3" class="card-body" style="background-image: url('{{ asset('images/frontend/home/home-main-banner.jpg') }}');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover;
-                        display: none;">
+                <div class="col-lg-6 col-md-6 banner-right d-flex align-self-end">
+                    <img class="img-fluid" src="{{ asset('template/img/hero-img.png') }}" alt="">
                 </div>
             </div>
         </div>
-        <div class="col-lg-3 col-md-3 px-md-1 d-none d-md-block">
-            <div class="row mb-2">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card">
-                        <a class="switch-slide" style="text-decoration: none; cursor: pointer;" data-slide="1">
-                            <div class="card-body bg-custom-black text-white">
-                                <span class="h5">Facade Design</span><br/><br/>
-                                <hr class="d-inline-flex w-50 border-white"/>
-                                <p>Lorem ipsum dolor sit amet unvalor unum equi</p>
-                            </div>
-                        </a>
-                    </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Start home-about Area -->
+    <section class="home-about-area pt-120">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-lg-6 col-md-6 home-about-left">
+                    <img class="img-fluid" src="{{ asset('template/img/about-img.png') }}" alt="">
+                </div>
+                <div class="col-lg-5 col-md-6 home-about-right">
+                    <h6>About Me</h6>
+                    <h1 class="text-uppercase">Personal Details</h1>
+                    <p>
+                        Here, I focus on a range of items and features that we use in life without giving them a second thought. such as Coca Cola. Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                    </p>
+                    <a href="#" class="primary-btn text-uppercase">View Full Details</a>
                 </div>
             </div>
-            <div class="row mb-2">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card">
-                        <a class="switch-slide" style="text-decoration: none; cursor: pointer;" data-slide="2">
-                            <div class="card-body bg-custom-black text-white">
-                                <span class="h5">Grand Launching</span><br/><br/>
-                                <hr class="d-inline-flex w-50 border-white"/>
-                                <p>Lorem ipsum dolor sit amet unvalor unum equi</p>
-                            </div>
-                        </a>
+        </div>
+    </section>
+    <!-- End home-about Area -->
+
+    <!-- Start services Area -->
+    <section class="services-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content col-lg-7">
+                    <div class="title text-center">
+                        <h1 class="mb-10">My Offered Services</h1>
+                        <p>At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected.</p>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card">
-                        <a class="switch-slide" style="text-decoration: none; cursor: pointer;" data-slide="3">
-                            <div class="card-body bg-custom-black text-white">
-                                <span class="h5">New Payment Method</span><br/><br/>
-                                <hr class="d-inline-flex w-50 border-white"/>
-                                <p>Lorem ipsum dolor sit amet unvalor unum equi</p>
-                            </div>
-                        </a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-pie-chart"></span>
+                        <a href="#"><h4>Web Design</h4></a>
+                        <p>
+                            “It is not because things are difficult that we do not dare; it is because we do not dare that they are difficult.”
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-laptop-phone"></span>
+                        <a href="#"><h4>Web Development</h4></a>
+                        <p>
+                            If you are an entrepreneur, you know that your success cannot depend on the opinions of others. Like the wind, opinions.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-camera"></span>
+                        <a href="#"><h4>Photography</h4></a>
+                        <p>
+                            Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-picture"></span>
+                        <a href="#"><h4>Clipping Path</h4></a>
+                        <p>
+                            Hypnosis quit smoking methods maintain caused quite a stir in the medical world over the last two decades. There is a lot of argument.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-tablet"></span>
+                        <a href="#"><h4>Apps Interface</h4></a>
+                        <p>
+                            Do you sometimes have the feeling that you’re running into the same obstacles over and over again? Many of my conflicts.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-services">
+                        <span class="lnr lnr-rocket"></span>
+                        <a href="#"><h4>Graphic Design</h4></a>
+                        <p>
+                            You’ve heard the expression, “Just believe it and it will come.” Well, technically, that is true, however, ‘believing’ is not just thinking that.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- End services Area -->
 
-    <div class="d-block d-md-none" style="font-size: 14px !important;">
-        <div class="row mb-2 ">
-            <div class="col-4 pr-1">
-                <div class="card">
-                    <a class="switch-slide" style="text-decoration: none; cursor: pointer;" data-slide="1">
-                        <div class="card-body bg-custom-black text-white p-2" style="height: 100px;">
-                            <div class="box h-100 d-flex justify-content-center flex-column text-center">
-                                <span>Facade Design</span>
-                            </div>
-                            {{--<hr class="d-inline-flex w-50 border-white"/>--}}
-                            {{--<p>Lorem ipsum dolor sit amet unvalor unum equi</p>--}}
-                        </div>
-                    </a>
+    <!-- Start fact Area -->
+    <section class="facts-area section-gap" id="facts-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 single-fact">
+                    <h1 class="counter">2536</h1>
+                    <p>Projects Completed</p>
                 </div>
-            </div>
-            <div class="col-4 px-1">
-                <div class="card">
-                    <a class="switch-slide" style="text-decoration: none; cursor: pointer;" data-slide="2">
-                        <div class="card-body bg-custom-black text-white" style="height: 100px;">
-                            <div class="box h-100 d-flex justify-content-center flex-column text-center">
-                                <span>Grand Launching</span>
-                            </div>
-                            {{--<hr class="d-inline-flex w-50 border-white"/>--}}
-                            {{--<p>Lorem ipsum dolor sit amet unvalor unum equi</p>--}}
-                        </div>
-                    </a>
+                <div class="col-lg-3 col-md-6 single-fact">
+                    <h1 class="counter">6784</h1>
+                    <p>Happy Clients</p>
                 </div>
-            </div>
-            <div class="col-4 pl-1">
-                <div class="card">
-                    <a class="switch-slide" style="text-decoration: none; cursor: pointer;" data-slide="3">
-                        <div class="card-body bg-custom-black text-white" style="height: 100px;">
-                            <div class="box h-100 d-flex justify-content-center flex-column text-center">
-                                <span>New Payment Method</span>
-                            </div>
-                            {{--<hr class="d-inline-flex w-50 border-white"/>--}}
-                            {{--<p>Lorem ipsum dolor sit amet unvalor unum equi</p>--}}
-                        </div>
-                    </a>
+                <div class="col-lg-3 col-md-6 single-fact">
+                    <h1 class="counter">2239</h1>
+                    <p>Cups of Coffee</p>
+                </div>
+                <div class="col-lg-3 col-md-6 single-fact">
+                    <h1 class="counter">435</h1>
+                    <p>Real Professionals</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!-- end fact Area -->
 
-    <div class="row mb-2">
-        <div class="col-lg-9 col-md-9 px-md-1 px-lg-1">
-            <div class="card">
-                <div class="card-body bg-custom-black text-white p-5">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="w-100 border-top border-bottom border-white text-custom-style">
-                                <span class="h1">FIRST</span><br/>
-                                <span class="h1">AND</span><br/>
-                                <span class="h1 text-custom-light-brown">F.O.R.</span><span class="h1">EMOST</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-12">
-                            <p><b>Pioneers are individuals reaching to secede from the status quo</b></p>
-                            <p>Breaking new ground in the field of "Small Office Home Office" is the latest launch by Triniti Land</p>
-                            <p>True to its entrepreneurial roots and inspired by the ideology of pioneership, F.O.R by Triniti Land is sophisticated yet functional.
-                                Exquisitely designed, merging inspiration and architecture, this is for those who dream of taking humble beginnings to greater levels of success</p>
-                        </div>
-                    </div>
-                    <div class="w-25 position-custom-bottom-left bg-custom-brown p-2 text-center d-none d-sm-block">
-                        <div class="row">
-                            <div class="col-lg-8 col-md-8 col-4">
-                                <span><b>Learn More</b></span>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-4">
-                                <a href="{{ route('frontend.introduction') }}">
-                                    <img src="{{ asset('images/frontend/arrow.png') }}" height="30"/>
-                                </a>
-                            </div>
-                        </div>
+    <!-- Start portfolio-area Area -->
+    <section class="portfolio-area section-gap" id="portfolio">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Our Latest Featured Projects</h1>
+                        <p>Who are in extremely love with eco friendly system.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-md-3 px-md-1 px-lg-1">
-            <div class="card">
-                <div class="card-body main-banner-responsive-short" style="background-image: url('{{ asset('images/frontend/home/home-2.jpg') }}');
-                        background-repeat: no-repeat;
-                        background-position: center;
-                        background-size: cover">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="row mb-2">
-        <div class="col-lg-6 col-md-6 px-md-1 px-lg-1">
-            <div class="row mb-2">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-5 pr-1">
-                            <div class="card">
-                                <div class="card-body bg-custom-brown">
-                                    <div style="height: 200px;">
-                                        <div class="box h-100 d-flex justify-content-center flex-column text-center">
-                                            <a href="{{ route('frontend.developer') }}">
-                                                <img src="{{ asset('images/frontend/arrow.png') }}" height="75">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+            <div class="filters">
+                <ul>
+                    <li class="active" data-filter="*">All</li>
+                    <li data-filter=".vector">Vector</li>
+                    <li data-filter=".raster">Raster</li>
+                    <li data-filter=".ui">UI/UX</li>
+                    <li data-filter=".printing">Printing</li>
+                </ul>
+            </div>
+
+            <div class="filters-content">
+                <div class="row grid">
+                    <div class="single-portfolio col-sm-4 all vector">
+                        <div class="relative">
+                            <div class="thumb">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{{ asset('template/img/p1.jpg') }}" alt="">
                             </div>
+                            <a href="{{ asset('template/img/p1.jpg') }}" class="img-pop-up">
+                                <div class="middle">
+                                    <div class="text align-self-center d-flex"><img src="{{ asset('template/img/preview.png') }}" alt=""></div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-7 pl-1">
-                            <div class="card">
-                                <div class="card-body text-right pl-0 pl-sm-2">
-                                    <div class="text-custom-style">
-                                        <span class="h1 font-weight-bold">ABOUT</span><br/>
-                                        <span class="h1 text-custom-light-brown font-weight-bold">DEVELOPER</span>
-                                    </div>
-                                    <hr class="d-inline-flex flex-row-reverse w-50 border-dark"/>
-                                    <p>Finely Crafted By Triniti Land</p>
-                                </div>
+                        <div class="p-inner">
+                            <h4>2D Vinyl Design</h4>
+                            <div class="cat">vector</div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio col-sm-4 all raster">
+                        <div class="relative">
+                            <div class="thumb">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{{ asset('template/img/p2.jpg') }}" alt="">
                             </div>
+                            <a href="{{ asset('template/img/p2.jpg') }}" class="img-pop-up">
+                                <div class="middle">
+                                    <div class="text align-self-center d-flex"><img src="{{ asset('template/img/preview.png') }}" alt=""></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-inner">
+                            <h4>2D Vinyl Design</h4>
+                            <div class="cat">vector</div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio col-sm-4 all ui">
+                        <div class="relative">
+                            <div class="thumb">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{{ asset('template/img/p3.jpg') }}" alt="">
+                            </div>
+                            <a href="{{ asset('template/img/p3.jpg') }}" class="img-pop-up">
+                                <div class="middle">
+                                    <div class="text align-self-center d-flex"><img src="{{ asset('template/img/preview.png') }}" alt=""></div>
+                                </div>
+                            </a>
+
+                        </div>
+                        <div class="p-inner">
+                            <h4>Creative Poster Design</h4>
+                            <div class="cat">Agency</div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio col-sm-4 all printing">
+                        <div class="relative">
+                            <div class="thumb">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{{ asset('template/img/p4.jpg') }}" alt="">
+                            </div>
+                            <a href="{{ asset('template/img/p4.jpg') }}" class="img-pop-up">
+                                <div class="middle">
+                                    <div class="text align-self-center d-flex"><img src="{{ asset('template/img/preview.png') }}" alt=""></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-inner">
+                            <h4>Embosed Logo Design</h4>
+                            <div class="cat">Portal</div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio col-sm-4 all vector">
+                        <div class="relative">
+                            <div class="thumb">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{{ asset('template/img/p5.jpg') }}" alt="">
+                            </div>
+                            <a href="{{ asset('template/img/p5.jpg') }}" class="img-pop-up">
+                                <div class="middle">
+                                    <div class="text align-self-center d-flex"><img src="{{ asset('template/img/preview.png') }}" alt=""></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-inner">
+                            <h4>3D Helmet Design</h4>
+                            <div class="cat">vector</div>
+                        </div>
+                    </div>
+                    <div class="single-portfolio col-sm-4 all raster">
+                        <div class="relative">
+                            <div class="thumb">
+                                <div class="overlay overlay-bg"></div>
+                                <img class="image img-fluid" src="{{ asset('template/img/p6.jpg') }}" alt="">
+                            </div>
+                            <a href="{{ asset('template/img/p6.jpg') }}" class="img-pop-up">
+                                <div class="middle">
+                                    <div class="text align-self-center d-flex"><img src="{{ asset('template/img/preview.png') }}" alt=""></div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="p-inner">
+                            <h4>2D Vinyl Design</h4>
+                            <div class="cat">raster</div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mb-2">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-8 pr-1">
-                            <div class="card">
-                                <div class="card-body text-right bg-custom-black pl-0 pl-sm-2">
-                                    <div class="text-custom-style">
-                                        <span class="h1 text-white font-weight-bold">PRIME</span><br/>
-                                        <span class="h1 text-custom-light-brown font-weight-bold">LOCATION</span>
-                                    </div>
-                                    <hr class="d-inline-flex flex-row-reverse w-50 border-white"/>
-                                    <p class="text-white">Strategically placed<br/>in a mature location</p>
-                                    <div class="position-custom-bottom-left bg-custom-brown p-2 text-center home-width-responsive">
-                                        <div class="row">
-                                            <div class="col-lg-9 col-md-9 col-9">
-                                                <span class="text-white"><b>Check Our Location</b></span>
-                                            </div>
-                                            <div class="col-lg-3 col-md-3 col-3">
-                                                <a href="{{ route('frontend.location') }}">
-                                                    <img src="{{ asset('images/frontend/arrow.png') }}" height="25"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+        </div>
+    </section>
+    <!-- End portfolio-area Area -->
+
+    <!-- Start testimonial Area -->
+    <section class="testimonial-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Client’s Feedback About Me</h1>
+                        <p>It is very easy to start smoking but it is an uphill task to quit it. Ask any chain smoker or even a person.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="active-testimonial">
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="{{ asset('template/img/elements/user1.png') }}" alt="">
                         </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-4 pl-1">
-                            <div class="card">
-                                <div class="card-body" style="background-image: url('{{ asset('images/frontend/home/home-3.jpg') }}');
-                                        background-repeat: no-repeat;
-                                        background-position: center;
-                                        background-size: cover;
-                                        height: 300px;">
-                                </div>
-                            </div>
+                        <div class="desc">
+                            <p>
+                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
+                            </p>
+                            <h4>Harriet Maxwell</h4>
+                            <p>CEO at Google</p>
+                        </div>
+                    </div>
+                    <div class="single-testimonial item d-flex flex-row">
+                        <div class="thumb">
+                            <img class="img-fluid" src="{{ asset('template/img/elements/user2.png') }}" alt="">
+                        </div>
+                        <div class="desc">
+                            <p>
+                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
+                            </p>
+                            <h4>Carolyn Craig</h4>
+                            <p>CEO at Facebook</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 px-md-1 px-lg-1">
-            <div class="row mb-2">
-                <div class="col-lg-12 col-md-12">
-                    <div class="card">
-                        <div class="card-body" style="background-image: url('{{ asset('images/frontend/home/home-video.jpg') }}');
-                                background-repeat: no-repeat;
-                                background-position: center;
-                                background-size: cover;
-                                height: 340px;">
-                        </div>
+    </section>
+    <!-- End testimonial Area -->
+
+    <!-- Start price Area -->
+    <section class="price-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content pb-70 col-lg-8">
+                    <div class="title text-center">
+                        <h1 class="mb-10">Choose Your Plan</h1>
+                        <p>When someone does something that they know that they shouldn’t do, did they.</p>
                     </div>
                 </div>
             </div>
-            <div class="row mb-2">
-                <div class="col-lg-12 col-md-12">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-8 pr-1">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5>Ground Breaking Video</h5>
-                                    <h5>12.12.2018</h5>
-                                    <hr class="d-inline-flex w-50 border-dark"/>
-                                    <p>Lorem ipsum dolor sit amet unvalor unum equi</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-4 pl-1">
-                            <div class="card">
-                                <div class="card-body bg-custom-black">
-                                    <div class="text-custom-style font-weight-bold">
-                                        <span class="h1 text-white">WHY</span><br/>
-                                        <span class="h1 text-custom-light-brown">FOR</span>
-                                    </div>
-                                    <div class="position-custom-bottom-right bg-custom-brown p-1 text-center text-white home-width-responsive">
-                                        <div class="row">
-                                            <div class="col-lg-8 col-md-8 col-12">
-                                                <span class="d-none d-sm-block"><b>Find Out</b></span>
-                                            </div>
-                                            <div class="col-lg-4 col-md-4 col-12">
-                                                <a href="{{ route('frontend.introduction') }}">
-                                                    <img src="{{ asset('images/frontend/arrow.png') }}" height="25"/>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 single-price">
+                    <div class="top-part">
+                        <h1 class="package-no">01</h1>
+                        <h4>Economy</h4>
+                        <p class="mt-10">For the individuals</p>
+                    </div>
+                    <div class="package-list">
+                        <ul>
+                            <li>Secure Online Transfer</li>
+                            <li>Unlimited Styles for interface</li>
+                            <li>Reliable Customer Service</li>
+                        </ul>
+                    </div>
+                    <div class="bottom-part">
+                        <h1>£199.00</h1>
+                        <a class="price-btn text-uppercase" href="#">Buy Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 single-price">
+                    <div class="top-part">
+                        <h1 class="package-no">02</h1>
+                        <h4>Business</h4>
+                        <p class="mt-10">For the individuals</p>
+                    </div>
+                    <div class="package-list">
+                        <ul>
+                            <li>Secure Online Transfer</li>
+                            <li>Unlimited Styles for interface</li>
+                            <li>Reliable Customer Service</li>
+                        </ul>
+                    </div>
+                    <div class="bottom-part">
+                        <h1>£299.00</h1>
+                        <a class="price-btn text-uppercase" href="#">Buy Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 single-price">
+                    <div class="top-part">
+                        <h1 class="package-no">03</h1>
+                        <h4>Premium</h4>
+                        <p class="mt-10">For the individuals</p>
+                    </div>
+                    <div class="package-list">
+                        <ul>
+                            <li>Secure Online Transfer</li>
+                            <li>Unlimited Styles for interface</li>
+                            <li>Reliable Customer Service</li>
+                        </ul>
+                    </div>
+                    <div class="bottom-part">
+                        <h1>£399.00</h1>
+                        <a class="price-btn text-uppercase" href="#">Buy Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 single-price">
+                    <div class="top-part">
+                        <h1 class="package-no">04</h1>
+                        <h4>Exclusive</h4>
+                        <p class="mt-10">For the individuals</p>
+                    </div>
+                    <div class="package-list">
+                        <ul>
+                            <li>Secure Online Transfer</li>
+                            <li>Unlimited Styles for interface</li>
+                            <li>Reliable Customer Service</li>
+                        </ul>
+                    </div>
+                    <div class="bottom-part">
+                        <h1>£499.00</h1>
+                        <a class="price-btn text-uppercase" href="#">Buy Now</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- /.row -->
+    </section>
+    <!-- End price Area -->
+
+    <!-- Start recent-blog Area -->
+    <section class="recent-blog-area section-gap">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 pb-30 header-text">
+                    <h1>Latest posts from our blog</h1>
+                    <p>
+                        You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving and expanding the business
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="single-recent-blog col-lg-4 col-md-4">
+                    <div class="thumb">
+                        <img class="f-img img-fluid mx-auto" src="{{ asset('template/img/b1.jpg') }}" alt="">
+                    </div>
+                    <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <div>
+                            <img class="img-fluid" src="{{ asset('template/img/user.png') }}" alt="">
+                            <a href="#"><span>Mark Wiens</span></a>
+                        </div>
+                        <div class="meta">
+                            13th Dec
+                            <span class="lnr lnr-heart"></span> 15
+                            <span class="lnr lnr-bubble"></span> 04
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h4>Break Through Self Doubt
+                            And Fear</h4>
+                    </a>
+                    <p>
+                        Dream interpretation has many forms; it can be done be done for the sake of fun, hobby or can be taken up as a serious career.
+                    </p>
+                </div>
+                <div class="single-recent-blog col-lg-4 col-md-4">
+                    <div class="thumb">
+                        <img class="f-img img-fluid mx-auto" src="{{ asset('template/img/b2.jpg') }}" alt="">
+                    </div>
+                    <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <div>
+                            <img class="img-fluid" src="{{ asset('template/img/user.png') }}" alt="">
+                            <a href="#"><span>Mark Wiens</span></a>
+                        </div>
+                        <div class="meta">
+                            13th Dec
+                            <span class="lnr lnr-heart"></span> 15
+                            <span class="lnr lnr-bubble"></span> 04
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h4>Portable Fashion for
+                            young women</h4>
+                    </a>
+                    <p>
+                        You may be a skillful, effective employer but if you don’t trust your personnel and the opposite, then the chances of improving.
+                    </p>
+                </div>
+                <div class="single-recent-blog col-lg-4 col-md-4">
+                    <div class="thumb">
+                        <img class="f-img img-fluid mx-auto" src="{{ asset('template/img/b3.jpg') }}" alt="">
+                    </div>
+                    <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+                        <div>
+                            <img class="img-fluid" src="{{ asset('template/img/user.png') }}" alt="">
+                            <a href="#"><span>Mark Wiens</span></a>
+                        </div>
+                        <div class="meta">
+                            13th Dec
+                            <span class="lnr lnr-heart"></span> 15
+                            <span class="lnr lnr-bubble"></span> 04
+                        </div>
+                    </div>
+                    <a href="#">
+                        <h4>Do Dreams Serve As
+                            A Premonition</h4>
+                    </a>
+                    <p>
+                        So many of us are demotivated to achieve anything. Such people are not enthusiastic about anything. They don’t want to work involved.
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end recent-blog Area -->
+
+    <!-- Start brands Area -->
+    <section class="brands-area">
+        <div class="container">
+            <div class="brand-wrap">
+                <div class="row align-items-center active-brand-carusel justify-content-start no-gutters">
+                    <div class="col single-brand">
+                        <a href="#"><img class="mx-auto" src="{{ asset('template/img/l1.png') }}" alt=""></a>
+                    </div>
+                    <div class="col single-brand">
+                        <a href="#"><img class="mx-auto" src="{{ asset('template/img/l2.png') }}" alt=""></a>
+                    </div>
+                    <div class="col single-brand">
+                        <a href="#"><img class="mx-auto" src="{{ asset('template/img/l3.png') }}" alt=""></a>
+                    </div>
+                    <div class="col single-brand">
+                        <a href="#"><img class="mx-auto" src="{{ asset('template/img/l4.png') }}" alt=""></a>
+                    </div>
+                    <div class="col single-brand">
+                        <a href="#"><img class="mx-auto" src="{{ asset('template/img/l5.png') }}" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End brands Area -->
 @endsection
 
 @section('scripts')

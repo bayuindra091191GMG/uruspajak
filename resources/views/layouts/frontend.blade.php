@@ -7,64 +7,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <!--
+    CSS
+    ============================================= -->
+    <link rel="stylesheet" href="{{ asset('template/css/linearicons.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/magnific-popup.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/nice-select.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/animate.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/owl.carousel.css') }}">
+    <link rel="stylesheet" href="{{ asset('template/css/main.css') }}">
 
-    <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link href="{{ asset('css/frontend/heroic-features.css')}}" rel="stylesheet">
     <link href="{{ asset('css/frontend/custom.css')}}" rel="stylesheet">
 
     @yield('styles')
 
 </head>
 
-<body style="background: #e6e7e8;">
-    {{--<div id="preloader"></div>--}}
+<body>
 
-    <!-- Page Content -->
-    <div class="container">
+    @include('partials.frontend._header')
 
-        @include('partials.frontend._header')
-
-        @yield('content')
-        <!-- Footer #1============================================= -->
-
-
-    </div>
+    @yield('content')
+    <!-- Footer #1============================================= -->
     @include('partials.frontend._footer')
-    <!-- /.container -->
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script>
-        $(window).on('load', function(){
-            // $('#preloader').delay(100).fadeOut();
-        });
+    <script src="{{ asset('template/js/vendor/jquery-2.2.4.min.js') }}"></script>
+    <script src="{{ asset('template/js/popper.min.js') }}"></script>
+    <script src="{{ asset('template/js/vendor/bootstrap.min.js') }}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{{ asset('template/js/easing.min.js') }}"></script>
+    <script src="{{ asset('template/js/hoverIntent.js') }}"></script>
+    <script src="{{ asset('template/js/superfish.min.js') }}"></script>
+    <script src="{{ asset('template/js/jquery.ajaxchimp.min.js') }}"></script>
+    <script src="{{ asset('template/js/jquery.magnific-popup.min.js') }}"></script>
+    <script src="{{ asset('template/js/jquery.tabs.min.js') }}"></script>
+    <script src="{{ asset('template/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ asset('template/js/isotope.pkgd.min.js') }}"></script>
+    <script src="{{ asset('template/js/waypoints.min.js') }}"></script>
+    <script src="{{ asset('template/js/jquery.counterup.min.js') }}"></script>
+    <script src="{{ asset('template/js/simple-skillbar.js') }}"></script>
+    <script src="{{ asset('template/js/owl.carousel.min.js') }}"></script>
+    <script src="{{ asset('template/js/mail-script.js') }}"></script>
+    <script src="{{ asset('template/js/main.js') }}"></script>
 
-        $('#subscription_form').on('submit', function(e) {
-            e.preventDefault();
-            var name = $('#subscribe_name').val();
-            var email = $('#subscribe_email').val();
-            // alert(name);
-
-            $.ajax({
-                type: 'POST',
-                url: '{{ route('frontend.subscribe.save') }}',
-                datatype : "application/json",
-                data: {
-                    '_token': '{{ csrf_token() }}',
-                    'name': name,
-                    'email': email
-                }, // no need to stringify
-                success: function (result) {
-                    $('#subscribe_success_message').slideDown(500);
-                }
-            });
-        });
-
-    </script>
     @yield('scripts')
 
 </body>
