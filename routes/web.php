@@ -20,7 +20,10 @@ Auth::routes();
 // FRONTEND ROUTE
 
 Route::get('/', 'Frontend\HomeController@index')->name('home');
-Route::get('/introduction', 'Frontend\HomeController@introduction')->name('frontend.introduction');
+Route::get('/business/one', 'Frontend\HomeController@formBusiness1')->name('frontend.form.business.1');
+Route::get('/business/two', 'Frontend\HomeController@formBusiness2')->name('frontend.form.business.2');
+Route::get('/business/four', 'Frontend\HomeController@formBusiness4')->name('frontend.form.business.4');
+Route::get('/fill', 'Frontend\HomeController@formFinal')->name('frontend.form.final');
 Route::get('/location', 'Frontend\HomeController@location')->name('frontend.location');
 Route::get('/developer', 'Frontend\HomeController@developer')->name('frontend.developer');
 Route::get('/master-plan', 'Frontend\HomeController@planMaster')->name('frontend.plan.master');

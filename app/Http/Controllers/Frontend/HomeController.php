@@ -30,8 +30,20 @@ class HomeController extends Controller
         return view('frontend.home');
     }
 
-    public function introduction(){
-        return view('frontend.introduction');
+    public function formBusiness1(){
+        return view('frontend.form-business.form-business-1');
+    }
+
+    public function formBusiness2(){
+        return view('frontend.form-business.form-business-2');
+    }
+
+    public function formBusiness4(){
+        return view('frontend.form-business.form-business-4');
+    }
+
+    public function formFinal(){
+        return view('frontend.form-final');
     }
 
     public function location(){

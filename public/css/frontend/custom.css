@@ -1,5 +1,12 @@
 #preloader { position: fixed; left: 0; top: 0; z-index: 1050; width: 100%; height: 100%; overflow: visible; background: #fff url('../../images/frontend/ripple.gif') no-repeat center center; }
 
+
+/* Template css override*/
+.section-gap{
+    padding: 60px 0;
+}
+/* End of template css override*/
+
 body{
     font-family: 'Akkurat Pro';
 }
@@ -12,29 +19,75 @@ body{
     height: 50px;
 }
 
-.bg-custom-black{
-    background-color: #393939;
+.bg-custom-dark-blue{
+    background-color: #555891;
 }
 
-.bg-custom-brown{
-    background-color: #654234;
+.bg-custom-yellow{
+    background-color: #F5D74C;
 }
 
-.bg-custom-light-brown{
-    background-color: #a36348;
+.bg-custom-white{
+    background-color: #FCFBFC;
 }
 
-.text-custom-brown{
-    color: #664234;
+.border-custom-dark-blue{
+    border-color: #555891;
 }
 
-.text-custom-light-brown{
-    color: #a36348;
+.border-custom-yellow{
+    border-color: #F5D74C;
+}
+
+.text-custom-dark-blue{
+    color: #555891 !important;
+}
+
+.text-custom-yellow{
+    color: #F5D74C !important;
+}
+
+.text-custom-white{
+    color: #FCFBFC;
+}
+
+.text-custom-gray{
+    color: #2e3747;
+}
+
+.text-custom-light-gray{
+    color: #ced3db;
+}
+
+.text-custom-black{
+    color: #000;
+}
+
+.text-custom-underline{
+    border-bottom: 2px solid #2e3747;
 }
 
 .text-custom-style{
     font-family: 'ultracondensedsansserifRg';
     line-height: 1;
+}
+
+.input-text-custom-style{
+    border: 0;
+    height:24px;
+    width: 100px !important;
+    margin-left:1px;
+    box-shadow: -1px 10px 0px -7px #000, -1px 10px 0px -7px #000;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+.input-text-custom-style:focus{
+    outline: none;
+    box-shadow: -1px 10px 0px -7px #000, -1px 10px 0px -7px #000;
+    background-color: #555891;
+    color: #000;
+    font-size: 24px;
 }
 
 .position-custom-bottom-left{
@@ -66,7 +119,7 @@ body{
     height: 300px;
 }
 
-.for-mt-10{
+.custom-mt-10{
     margin-top: 6em;
 }
 
@@ -106,13 +159,9 @@ body{
     width: 100%;
 }
 
-.h1{
-    font-size: 2.5rem;
-}
-
 @media (min-width: 576px) {
-    .for-mt-10{
-        margin-top: 10em;
+    .custom-mt-10{
+        margin-top: 6em;
     }
 
     .logo-responsive{
@@ -138,10 +187,6 @@ body{
 
     .home-width-responsive{
         width: 70%;
-    }
-
-    .h1{
-        font-size: 2.7rem;
     }
 }
 
