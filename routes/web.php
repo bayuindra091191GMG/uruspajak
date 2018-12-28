@@ -22,17 +22,14 @@ Auth::routes();
 Route::get('/', 'Frontend\HomeController@index')->name('home');
 Route::get('/business/one', 'Frontend\HomeController@formBusiness1')->name('frontend.form.business.1');
 Route::get('/business/two', 'Frontend\HomeController@formBusiness2')->name('frontend.form.business.2');
+Route::get('/business/three', 'Frontend\HomeController@formBusiness3')->name('frontend.form.business.3');
 Route::get('/business/four', 'Frontend\HomeController@formBusiness4')->name('frontend.form.business.4');
+Route::get('/individual/one', 'Frontend\HomeController@formIndividual1')->name('frontend.form.individual.1');
+Route::get('/individual/two', 'Frontend\HomeController@formIndividual2')->name('frontend.form.individual.2');
+Route::get('/individual/three', 'Frontend\HomeController@formIndividual3')->name('frontend.form.individual.3');
 Route::get('/fill', 'Frontend\HomeController@formFinal')->name('frontend.form.final');
-Route::get('/location', 'Frontend\HomeController@location')->name('frontend.location');
-Route::get('/developer', 'Frontend\HomeController@developer')->name('frontend.developer');
-Route::get('/master-plan', 'Frontend\HomeController@planMaster')->name('frontend.plan.master');
-Route::get('/floor-plan', 'Frontend\HomeController@planFloor')->name('frontend.plan.floor');
-Route::get('/unit-plan', 'Frontend\HomeController@planUnit')->name('frontend.plan.unit');
-Route::get('/features', 'Frontend\HomeController@features')->name('frontend.features');
-Route::get('/contact-us', 'Frontend\HomeController@contactUs')->name('frontend.contact_us');
-Route::post('/contact-us', 'Frontend\HomeController@saveContactUs')->name('frontend.contact_us.save');
-Route::post('/subscribe-submit', 'Admin\SubscribeController@store')->name('frontend.subscribe.save');
+Route::post('/fill-submit', 'Admin\HomeController@storeForm')->name('frontend.fill.store');
+Route::get('/thankyou', 'Frontend\HomeController@formThankYou')->name('frontend.form.thank_you');
 
 // ADMIN ROUTE
 // ====================================================================================================================

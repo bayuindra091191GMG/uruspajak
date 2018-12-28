@@ -10,17 +10,44 @@
 
 @section('content')
     <!-- start banner Area -->
-    <section class="banner-area custom-mt-10">
+    <section class="banner-area mt-3">
         <div class="container-fluid">
             <div class="row fullscreen align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-6 p-4">
-                    <h1>Business.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p>
+                <div class="col-lg-6 col-md-6 pb-0 bg-custom-dark-blue border border-left-0 border-right-0 bw-3 border-dark">
+                    <div class="row">
+                        <div class="col-md-3 col-0"></div>
+                        <div class="col-md-5 col-8">
+                            <div style="height: 350px;">
+                                <div class="box h-100 d-flex justify-content-center flex-column margin-center">
+                                    <h1 class="text-custom-yellow">Business.</h1>
+                                    <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                    <a href="{{ route('frontend.form.business.1') }}" class="btn btn-primary w-75 p-1 bg-custom-yellow bw-2 border-dark text-custom-black">Pick your plan</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('images/frontend/home1.png') }}" height="350"
+                                 style="position: absolute; bottom: 0; right: 5px;"/>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6 col-md-6 p-4">
-                    {{--<img class="img-fluid" src="{{ asset('template/img/hero-img.png') }}" alt="">--}}
-                    <h1>Individual.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p>
+                <div class="col-lg-6 col-md-6 pb-0 bg-custom-yellow border border-right-0 bw-3 border-dark">
+                    <div class="row">
+                        <div class="col-md-3 col-0"></div>
+                        <div class="col-md-5 col-8">
+                            <div style="height: 350px;">
+                                <div class="box h-100 d-flex justify-content-center flex-column margin-center">
+                                    <h1 class="text-custom-dark-blue">Individual.</h1>
+                                    <p class="text-custom-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                    <a href="{{ route('frontend.form.individual.1') }}" class="btn btn-primary w-75 p-1 bg-custom-dark-blue bw-2 border-dark text-custom-white">Pick your plan</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <img src="{{ asset('images/frontend/home2.png') }}" height="350"
+                                 style="position: absolute; bottom: 0; right: 5px;"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -48,35 +75,59 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6">
-                    <div class="p-1">
-                        <h4>CHECK PICTURE HERE</h4><br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p><br/>
-                        <h4>John Doe</h4>
-                        <span>@john</span>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <img src="{{ asset('images/frontend/check.png') }}"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p><br/>
+                            <h4>John Doe</h4>
+                            <span>@john</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="p-1">
-                        <h4>CHECK PICTURE HERE</h4><br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p><br/>
-                        <h4>John Doe</h4>
-                        <span>@john</span>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <img src="{{ asset('images/frontend/check.png') }}"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p><br/>
+                            <h4>John Doe</h4>
+                            <span>@john</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="p-1">
-                        <h4>CHECK PICTURE HERE</h4><br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p><br/>
-                        <h4>John Doe</h4>
-                        <span>@john</span>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <img src="{{ asset('images/frontend/check.png') }}"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p><br/>
+                            <h4>John Doe</h4>
+                            <span>@john</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <div class="p-1 text-m">
-                        <h4>CHECK PICTURE HERE</h4><br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p><br/>
-                        <h4>John Doe</h4>
-                        <span>@john</span>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <img src="{{ asset('images/frontend/check.png') }}"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p><br/>
+                            <h4>John Doe</h4>
+                            <span>@john</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,16 +135,31 @@
     </section>
     <!-- End services Area -->
 
-    <!-- CARA KERJA Area -->
+    <!-- Start cara kerja intro Area -->
+    <section class="services-area section-gap">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="menu-content col-lg-7">
+                    <div class="title text-center">
+                        <h4 class="mb-10">Pelajari Cara Kerja Kami</h4>
+                        <h1 class="mb-10">Cara Kerja</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End cara kerja intro Area -->
+
+    <!-- Start cara kerja Area -->
     <section class="mb-3">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3>PICTURE HERE</h3>
+                            <div class="row mb-3">
+                                <div class="col-12 text-center">
+                                    <img src="{{ asset('images/frontend/01-call.png') }}" style="margin-top: -90px;"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -110,6 +176,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
+                                    <hr class="w-25 bw-3 ml-0"/>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
                                 </div>
                             </div>
@@ -120,9 +187,9 @@
                 <div class="col-md-3 col-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3>PICTURE HERE</h3>
+                            <div class="row mb-3">
+                                <div class="col-12 text-center">
+                                    <img src="{{ asset('images/frontend/02-meet.png') }}" style="margin-top: -90px;"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -139,6 +206,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
+                                    <hr class="w-25 bw-3 ml-0"/>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
                                 </div>
                             </div>
@@ -149,9 +217,9 @@
                 <div class="col-md-3 col-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3>PICTURE HERE</h3>
+                            <div class="row mb-3">
+                                <div class="col-12 text-center">
+                                    <img src="{{ asset('images/frontend/03-calculate.png') }}" style="margin-top: -90px;"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -168,6 +236,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
+                                    <hr class="w-25 bw-3 ml-0"/>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
                                 </div>
                             </div>
@@ -178,9 +247,9 @@
                 <div class="col-md-3 col-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-12">
-                                    <h3>PICTURE HERE</h3>
+                            <div class="row mb-3">
+                                <div class="col-12 text-center">
+                                    <img src="{{ asset('images/frontend/04-report.png') }}" style="margin-top: -90px;"/>
                                 </div>
                             </div>
                             <div class="row">
@@ -197,6 +266,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
+                                    <hr class="w-25 bw-3 ml-0"/>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
                                 </div>
                             </div>
@@ -208,22 +278,25 @@
     </section>
     <!-- end WANT A BITE Area -->
 
-    <!-- WANT A BITE Area -->
+    <!-- Start WANT A BITE Area -->
     <section class="mb-3">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body bg-custom-dark-blue p-0">
                             <div class="row">
                                 <div class="col-md-6 col-12">
-                                    <h3>PICTURE HERE</h3>
+                                    <img src="{{ asset('images/frontend/test-drive.png') }}"/>
                                 </div>
                                 <div class="col-md-6 col-12">
-                                    <h3>WANT A BITE?</h3>
-                                    <br/>
-                                    <br/>
-                                    <br/>
+                                    <div style="height: 265px;">
+                                        <div class="box h-100 w-75 d-flex justify-content-center flex-column margin-center">
+                                            <h1 class="text-custom-yellow">Want a Bite?</h1>
+                                            <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                            <a href="#" class="btn btn-primary w-50 p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Take a test drive</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -232,24 +305,27 @@
             </div>
         </div>
     </section>
-    <!-- end WANT A BITE Area -->
+    <!-- End WANT A BITE Area -->
 
-    <!-- MAU KONSULTASI PAJAK? Area -->
+    <!-- Start MAU KONSULTASI PAJAK? Area -->
     <section class="mb-3">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-body">
+                        <div class="card-body bg-custom-yellow p-0">
                             <div class="row">
-                                <div class="col-md-6 col-12">
-                                    <h3>PICTURE HERE</h3>
+                                <div class="col-md-6 col-12 text-center">
+                                    <img src="{{ asset('images/frontend/contact.png') }}"/>
                                 </div>
                                 <div class="col-md-6 col-12">
-                                    <h3>MAU KONSULTASI PAJAK??</h3>
-                                    <br/>
-                                    <br/>
-                                    <br/>
+                                    <div style="height: 265px;">
+                                        <div class="box h-100 w-75 d-flex justify-content-center flex-column margin-center">
+                                            <h1 class="text-custom-dark-blue">Mau Konsultasi Pajak?</h1>
+                                            <p class="text-custom-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                            <a href="#" class="btn btn-primary w-50 p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Hubungi Kami</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -258,13 +334,17 @@
             </div>
         </div>
     </section>
-    <!-- end MAU KONSULTASI PAJAK? Area -->
+    <!-- End MAU KONSULTASI PAJAK? Area -->
 @endsection
 
 @section('styles')
     <style>
         .banner-area .fullscreen{
             height: 500px !important;
+        }
+
+        .margin-center{
+            margin: 0 auto 0;
         }
     </style>
 @endsection

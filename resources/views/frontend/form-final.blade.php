@@ -23,6 +23,20 @@
 
     <section class="section-gap">
         <div class="container">
+            {{ Form::open(['route'=>['frontend.fill.store'],'method' => 'post','id' => 'general-form', 'novalidate']) }}
+            @if(count($errors))
+                <div class="row">
+                    <div class="col-12">
+                        <div class="alert alert-danger" role="alert">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            @endif
             <div class="row">
                 <div class="col-md-6 col-12">
                     <div class="row mb-2">
@@ -46,42 +60,42 @@
                         <div class="col-md-12 col-12">
                             <div class="form-row">
                                 <div class="form-group col-md-6 col-12">
-                                    <label for="name">Nama Pertama</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <label for="fname">Nama Pertama</label>
+                                    <input type="text" class="form-control" id="fname" name="fname">
                                 </div>
                                 <div class="form-group col-md-6 col-12">
-                                    <label for="name">Nama Belakang</label>
-                                    <input type="text" class="form-control" id="name" name="name">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6 col-12">
-                                    <label for="name">Alamat Email</label>
-                                    <input type="text" class="form-control" id="name" name="name">
-                                </div>
-                                <div class="form-group col-md-6 col-12">
-                                    <label for="name">Nomor Telpon</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <label for="lname">Nama Belakang</label>
+                                    <input type="text" class="form-control" id="lname" name="lname">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6 col-12">
-                                    <label for="name">Bisnis</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <label for="email">Alamat Email</label>
+                                    <input type="email" class="form-control" id="email" name="email">
                                 </div>
                                 <div class="form-group col-md-6 col-12">
-                                    <label for="name">Kota</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <label for="phone">Nomor Telpon</label>
+                                    <input type="text" class="form-control" id="phone" name="phone">
                                 </div>
                             </div>
                             <div class="form-row">
                                 <div class="form-group col-md-6 col-12">
-                                    <label for="name">Provinsi</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <label for="business">Bisnis</label>
+                                    <input type="text" class="form-control" id="business" name="business">
                                 </div>
                                 <div class="form-group col-md-6 col-12">
-                                    <label for="name">Kode Zip</label>
-                                    <input type="text" class="form-control" id="name" name="name">
+                                    <label for="city">Kota</label>
+                                    <input type="text" class="form-control" id="city" name="city">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6 col-12">
+                                    <label for="state">Provinsi</label>
+                                    <input type="text" class="form-control" id="state" name="state">
+                                </div>
+                                <div class="form-group col-md-6 col-12">
+                                    <label for="zip">Kode Zip</label>
+                                    <input type="text" class="form-control" id="zip" name="zip" value="{{ $zip }}">
                                 </div>
                             </div>
                         </div>
@@ -89,17 +103,27 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="form-group">
-                                <label for="name">Nama Perusahaan</label>
-                                <input type="text" class="form-control" id="name" name="name">
+                                <label for="company_name">Nama Perusahaan</label>
+                                <input type="text" class="form-control" id="company_name" name="company_name">
                             </div>
                             <div class="form-group">
-                                <label for="name">Kapan dibutuhkan?</label>
-                                <input type="text" class="form-control" id="name" name="name">
+                                <label for="when">Kapan dibutuhkan?</label>
+                                <input type="text" class="form-control" id="when" name="when">
+                            </div>
+                            <div class="form-group text-right">
+                                <input type="submit" class="btn btn-default w-25 bg-custom-dark-blue text-custom-yellow p-2" value="Submit" />
                             </div>
                         </div>
                     </div>
                 </div>
+                <input type="hidden" name="type" value="{{ $type }}"/>
+                <input type="hidden" name="who" value="{{ $who }}"/>
+                <input type="hidden" name="income" value="{{ $income }}"/>
+                <input type="hidden" name="tax_report" value="{{ $tax_report }}"/>
+                <input type="hidden" name="omzet" value="{{ $omzet }}"/>
+                <input type="hidden" name="package" value="{{ $package }}"/>
             </div>
+            {{ Form::close() }}
         </div>
     </section>
 @endsection

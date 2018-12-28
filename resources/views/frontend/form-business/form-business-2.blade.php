@@ -33,7 +33,7 @@
             <div class="row mb-2">
                 <div class="col-12">
                     <span class="h4 text-custom-gray">Kode ZIP saya adalah </span>
-                    <span class="h4 text-custom-gray text-custom-underline">11460</span>
+                    <span class="h4 text-custom-gray text-custom-underline">{{ $zip }}</span>
                 </div>
             </div>
             <div class="row mb-2">
@@ -48,19 +48,19 @@
             <div class="row mb-2">
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioOption1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="tax_report" id="radioOption1" value="option1" checked>
                         <label class="form-check-label h4 text-custom-black" for="radioOption1">
                             Lapor Pajak Bulanan
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioOption2" value="option2">
+                        <input class="form-check-input" type="radio" name="tax_report" id="radioOption2" value="option2">
                         <label class="form-check-label h4 text-custom-black" for="radioOption2">
                             Lapor Pajak Tahunan
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exampleRadios" id="radioOption3" value="option3">
+                        <input class="form-check-input" type="radio" name="tax_report" id="radioOption3" value="option3">
                         <label class="form-check-label h4 text-custom-black" for="radioOption3">
                             Lapor Keuangan Tahunan
                         </label>
@@ -69,7 +69,7 @@
             </div>
             <div class="row mb-2">
                 <div class="col-12">
-                    <a href="#" class="btn btn-primary px-4 py-2 bg-custom-yellow border-dark text-custom-black">Next</a>
+                    <a class="btn btn-primary px-4 py-2 bg-custom-yellow border-dark text-custom-black" style="cursor: pointer;" onclick="goNext();">Next</a>
                 </div>
             </div>
         </div>
@@ -86,4 +86,10 @@
 @endsection
 
 @section('scripts')
+    <script>
+        function goNext(){
+            var option = $('input[name=tax_report]:checked').val();
+            window.location = '{{ route('frontend.form.business.3') }}?zip=' + '{{ $zip }}' + '&tax_report=' + option;
+        }
+    </script>
 @endsection

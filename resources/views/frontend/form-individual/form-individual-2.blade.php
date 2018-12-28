@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row mb-2">
                 <div class="col-12">
-                    <span class="text-custom-white">Let's get you a quote - it only takes a few second</span><br/>
+                    <span class="text-custom-black">Let's get you a quote - it only takes a few second</span><br/>
                 </div>
             </div>
             <div class="row mb-2">
@@ -38,16 +38,9 @@
             </div>
             <div class="row mb-2">
                 <div class="col-12">
-                    <span class="h4 text-custom-gray">Saya ingin mengurus </span>
-                    <span class="h4 text-custom-gray text-custom-underline">{{ $tax_report }}</span>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-12">
                     <form class="form-inline">
                         <div class="form-group">
-                            <label class="h3 text-custom-black" for="cover">Omzet saya per bulan</label>
-                            <input type="text" id="cover" class="form-control bg-custom-dark-blue mx-sm-3 h3 text-custom-black input-text-custom-style">
+                            <label class="h3 text-custom-black" for="cover">Saya seorang :</label>
                         </div>
                     </form>
                 </div>
@@ -55,28 +48,34 @@
             <div class="row mb-2">
                 <div class="col-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="omzet" id="radioOption1" value="option1" checked>
+                        <input class="form-check-input" type="radio" name="who" id="radioOption1" value="option1" checked>
                         <label class="form-check-label h4 text-custom-black" for="radioOption1">
-                            0 - 50 juta
+                            Karyawan
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="omzet" id="radioOption2" value="option2">
+                        <input class="form-check-input" type="radio" name="who" id="radioOption2" value="option2">
                         <label class="form-check-label h4 text-custom-black" for="radioOption2">
-                            50 - 400 juta
+                            Freelancer
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="omzet" id="radioOption3" value="option3">
+                        <input class="form-check-input" type="radio" name="who" id="radioOption3" value="option3">
                         <label class="form-check-label h4 text-custom-black" for="radioOption3">
-                            >400 juta
+                            Wiraswasta
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="who" id="radioOption4" value="option4">
+                        <label class="form-check-label h4 text-custom-black" for="radioOption4">
+                            Karyawan < 1 tempat kerja
                         </label>
                     </div>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col-12">
-                    <a class="btn btn-primary px-4 py-2 bg-custom-yellow border-dark text-custom-black" style="cursor: pointer;" onclick="goNext();">Next</a>
+                    <a class="btn btn-primary px-4 py-2 bg-custom-dark-blue border-dark text-custom-white" style="cursor: pointer;" onclick="goNext();">Next</a>
                 </div>
             </div>
         </div>
@@ -87,7 +86,7 @@
 @section('styles')
     <style>
         body{
-            background-color: #555891;
+            background-color: #F5D74C;
         }
     </style>
 @endsection
@@ -95,8 +94,8 @@
 @section('scripts')
     <script>
         function goNext(){
-            var option = $('input[name=omzet]:checked').val();
-            window.location = '{{ route('frontend.form.business.4') }}?zip=' + '{{ $zip }}' + '&tax_report=' + '{{ $tax_report_option }}' + '&omzet=' + option;
+            var option = $('input[name=who]:checked').val();
+            window.location = '{{ route('frontend.form.individual.3') }}?zip=' + '{{ $zip }}' + '&who=' + option;
         }
     </script>
 @endsection

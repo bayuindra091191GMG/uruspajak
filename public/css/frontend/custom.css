@@ -48,7 +48,7 @@ body{
 }
 
 .text-custom-white{
-    color: #FCFBFC;
+    color: #FCFBFC !important;
 }
 
 .text-custom-gray{
@@ -61,6 +61,10 @@ body{
 
 .text-custom-black{
     color: #000;
+}
+
+.bw-2{
+    border-width: 2px !important;
 }
 
 .text-custom-underline{
@@ -85,7 +89,7 @@ body{
 .input-text-custom-style:focus{
     outline: none;
     box-shadow: -1px 10px 0px -7px #000, -1px 10px 0px -7px #000;
-    background-color: #555891;
+    background-color: inherit;
     color: #000;
     font-size: 24px;
 }

@@ -9,16 +9,17 @@
 @endsection
 
 @section('content')
-    <section class="section-gap mb-100">
+    <section class="mt-4">
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h1>LOGO HERE</h1>
+                    <a href="{{ route('home') }}" style="text-decoration: none;">
+                        <img src="{{ asset('images/frontend/logo2.png') }}" height="50"/>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- start banner Area -->
     <section class="section-gap">
@@ -31,19 +32,19 @@
             <div class="row mb-2">
                 <div class="col-12">
                     <span class="h4 text-custom-gray">Kode ZIP saya adalah </span>
-                    <span class="h4 text-custom-gray text-custom-underline">11460</span>
+                    <span class="h4 text-custom-gray text-custom-underline">{{ $zip }}</span>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col-12">
                     <span class="h4 text-custom-gray">Saya ingin mengurus </span>
-                    <span class="h4 text-custom-gray text-custom-underline">Lapor pajak tahunan</span>
+                    <span class="h4 text-custom-gray text-custom-underline">{{ $tax_report }}</span>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col-12">
                     <span class="h4 text-custom-gray">Omzet saya per bulan </span>
-                    <span class="h4 text-custom-gray text-custom-underline">0 - 50 juta</span>
+                    <span class="h4 text-custom-gray text-custom-underline">{{ $omzet }}</span>
                 </div>
             </div>
             <div class="row mb-2">
@@ -138,13 +139,28 @@
                             </tr>
                             <tr>
                                 <td colspan="2" class="border-bottom border-left border-right bw-3 border-dark text-center">
-                                    <a href="#" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
+                                    <a href="{{ route('frontend.form.final',
+                                    ['type' => 'business',
+                                    'zip' => $zip,
+                                    'tax_report' => $tax_report_option,
+                                    'omzet' => $omzet_option,
+                                    'package' => 'small']) }}" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
                                 </td>
                                 <td colspan="2" class="border-bottom border-right bw-3 border-dark text-center">
-                                    <a href="#" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
+                                    <a href="{{ route('frontend.form.final',
+                                    ['type' => 'business',
+                                    'zip' => $zip,
+                                    'tax_report' => $tax_report_option,
+                                    'omzet' => $omzet_option,
+                                    'package' => 'business']) }}" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
                                 </td>
                                 <td colspan="2" class="border-bottom border-right bw-3 border-dark text-center">
-                                    <a href="#" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
+                                    <a href="{{ route('frontend.form.final',
+                                    ['type' => 'business',
+                                    'zip' => $zip,
+                                    'tax_report' => $tax_report_option,
+                                    'omzet' => $omzet_option,
+                                    'package' => 'enterpreneur']) }}" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
                                 </td>
                             </tr>
                             </tbody>

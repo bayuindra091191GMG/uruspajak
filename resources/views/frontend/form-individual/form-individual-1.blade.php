@@ -22,12 +22,12 @@
     </section>
 
 
-    <!-- start banner Area -->
+    <!-- start form Area -->
     <section class="section-gap">
         <div class="container">
             <div class="row mb-3">
                 <div class="col-12">
-                    <span class="text-custom-white">Let's get you a quote - it only takes a few second</span><br/>
+                    <span class="text-custom-black">Let's get you a quote - it only takes a few second</span><br/>
                 </div>
             </div>
             <div class="row mb-3">
@@ -35,25 +35,25 @@
                     <form class="form-inline">
                         <div class="form-group">
                             <label class="h3 text-custom-black" for="zip">Kode ZIP saya adalah </label>
-                            <input type="text" id="zip" class="form-control bg-custom-dark-blue mx-sm-3 h3 text-custom-black input-text-custom-style">
+                            <input type="text" id="zip" class="form-control bg-custom-yellow mx-sm-3 h3 text-custom-black input-text-custom-style">
                         </div>
                     </form>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col-12">
-                    <a class="btn btn-primary px-4 py-2 bg-custom-yellow border-dark text-custom-black" style="cursor: pointer;" onclick="goNext();">Next</a>
+                    <a class="btn btn-primary px-4 py-2 bg-custom-dark-blue border-dark text-custom-white" style="cursor: pointer;" onclick="goNext();">Next</a>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End banner Area -->
+    <!-- End form Area -->
 @endsection
 
 @section('styles')
     <style>
         body{
-            background-color: #555891;
+            background-color: #F5D74C;
         }
     </style>
 @endsection
@@ -62,7 +62,7 @@
     <script>
         function goNext(){
             var zipCode = $('#zip').val();
-            window.location = '{{ route('frontend.form.business.2') }}?zip=' + zipCode;
+            window.location = '{{ route('frontend.form.individual.2') }}?zip=' + zipCode;
         }
     </script>
 @endsection

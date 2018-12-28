@@ -27,22 +27,21 @@
         <div class="container">
             <div class="row mb-3">
                 <div class="col-12">
-                    <span class="text-custom-white">Let's get you a quote - it only takes a few second</span><br/>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-12">
                     <form class="form-inline">
                         <div class="form-group">
-                            <label class="h3 text-custom-black" for="zip">Kode ZIP saya adalah </label>
-                            <input type="text" id="zip" class="form-control bg-custom-dark-blue mx-sm-3 h3 text-custom-black input-text-custom-style">
+                            <label class="h1 text-custom-black" for="zip">Thank You</label>
                         </div>
                     </form>
                 </div>
             </div>
             <div class="row mb-2">
                 <div class="col-12">
-                    <a class="btn btn-primary px-4 py-2 bg-custom-yellow border-dark text-custom-black" style="cursor: pointer;" onclick="goNext();">Next</a>
+                    @if($type === 'business')
+                        <a href="{{ route('home') }}" class="btn btn-primary px-4 py-2 bg-custom-yellow border-dark text-custom-black">Back to Home</a>
+                    @else
+                        <a href="{{ route('home') }}" class="btn btn-primary px-4 py-2 bg-custom-dark-blue border-dark text-custom-white">Back to Home</a>
+                    @endif
+
                 </div>
             </div>
         </div>
@@ -52,17 +51,17 @@
 
 @section('styles')
     <style>
-        body{
+        @if($type === 'business')
+            body{
             background-color: #555891;
         }
+        @else
+            body{
+            background-color: #F5D74C;
+        }
+        @endif
     </style>
 @endsection
 
 @section('scripts')
-    <script>
-        function goNext(){
-            var zipCode = $('#zip').val();
-            window.location = '{{ route('frontend.form.business.2') }}?zip=' + zipCode;
-        }
-    </script>
 @endsection
