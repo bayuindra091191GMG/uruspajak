@@ -1,19 +1,20 @@
-#preloader { position: fixed; left: 0; top: 0; z-index: 1050; width: 100%; height: 100%; overflow: visible; background: #fff url('../../images/frontend/ripple.gif') no-repeat center center; }
-
-
 /* Template css override*/
 .section-gap{
     padding: 60px 0;
 }
-/* End of template css override*/
+
+#header{
+    font-family: 'Roboto', sans-serif !important;
+}
+
+footer{
+    font-family: 'Roboto', sans-serif !important;
+}
 
 body{
-    font-family: 'Akkurat Pro';
+    font-family: 'Roboto', sans-serif !important;
 }
-
-.navbar{
-    font-family: 'Akkurat Pro' !important;
-}
+/* End of template css override*/
 
 .footer-logo-responsive{
     height: 50px;
@@ -71,9 +72,13 @@ body{
     border-bottom: 2px solid #2e3747;
 }
 
-.text-custom-style{
-    font-family: 'ultracondensedsansserifRg';
-    line-height: 1;
+.text-custom-roboto-light{
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 300 !important;
+}
+
+.font-weight-medium{
+    font-weight: 500 !important;
 }
 
 .input-text-custom-style{
@@ -92,6 +97,21 @@ body{
     background-color: inherit;
     color: #000;
     font-size: 24px;
+}
+
+.input-text-custom-style-final{
+    width: 100%;
+    border: 0;
+    box-shadow: -1px 9px 0px -7px #555891, -6px 9px 0px -7px #555891;
+    -webkit-transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s;
+}
+
+.input-text-custom-style-final:focus{
+    outline: none;
+    box-shadow: -1px 9px 0px -7px #555891, -6px 9px 0px -7px #555891;
+    background-color: inherit;
+    color: #000;
 }
 
 .position-custom-bottom-left{
@@ -123,129 +143,52 @@ body{
     height: 300px;
 }
 
-.custom-mt-10{
-    margin-top: 6em;
+.custom-mb-6{
+    margin-bottom: 6rem;
 }
 
 .logo-responsive{
     height: 50px;
 }
 
-.home-banner-responsive{
-    height: 200px;
+.height-home-banner-responsive{
+    height:150px;
 }
 
-.main-banner-responsive-long{
-    height: 200px;
-}
-
-.main-banner-responsive-short{
-    height: 200px;
-}
-
-.image-general-responsive{
-    height: 200px;
-}
-
-.location-image-responsive{
-    height: 300px;
-}
-
-.developer-image-responsive{
-    height: 500px;
-}
-
-.feature-image-responsive{
-    height: 100px;
-}
-
-.home-width-responsive{
+.width-home-image-responsive{
     width: 100%;
 }
 
+.width-home-button-responsive{
+    width: 100%;
+}
+
+#section_tax_consultation{
+    height: 350px;
+}
+
 @media (min-width: 576px) {
-    .custom-mt-10{
-        margin-top: 6em;
-    }
 
-    .logo-responsive{
-        height: 100px;
-    }
-
-    .footer-logo-responsive{
-        height: 50px;
-    }
-
-    .main-banner-responsive-long{
-        height: inherit;
-        min-height: 200px;
-    }
-
-    .main-banner-responsive-short{
-        height: 200px;
-    }
-
-    .image-general-responsive{
-        height: 200px;
-    }
-
-    .home-width-responsive{
-        width: 70%;
-    }
 }
 
 @media (min-width: 768px) {
-    .logo-responsive{
-        height: 100px;
+    .custom-mb-6{
+        margin-bottom: 0;
     }
 
-    .footer-logo-responsive{
-        height: 75px;
+    .height-home-banner-responsive{
+        height:350px;
     }
 
-    .image-general-responsive{
-        height: 400px;
+    .width-home-image-responsive{
+        width: initial;
     }
 
-    .home-banner-responsive{
-        height: inherit;
-        min-height: 580px;
+    .width-home-button-responsive{
+        width: 50%;
     }
 
-    .main-banner-responsive-long{
-        height: inherit;
-        min-height: 500px;
+    #section_tax_consultation{
+        height: 265px;
     }
-
-    .main-banner-responsive-short{
-        height: 200px;
-    }
-
-    .location-image-responsive{
-        height: 570px;
-    }
-
-    .developer-image-responsive{
-        height: inherit;
-    }
-
-    .feature-image-responsive{
-        height:250px;
-    }
-}
-
-@font-face {
-    font-family: 'ultracondensedsansserifRg';
-    src: url('../../fonts/ultracondensedsansserif-webfont.woff2') format('woff2'),
-    url('../../fonts/ultracondensedsansserif-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akkurat Pro';
-    src: url('../../fonts/AkkuratPro-Regular.woff2') format('woff2'),
-    url('../../fonts/AkkuratPro-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
 }

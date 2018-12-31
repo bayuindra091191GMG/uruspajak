@@ -28,7 +28,7 @@ Route::get('/individual/one', 'Frontend\HomeController@formIndividual1')->name('
 Route::get('/individual/two', 'Frontend\HomeController@formIndividual2')->name('frontend.form.individual.2');
 Route::get('/individual/three', 'Frontend\HomeController@formIndividual3')->name('frontend.form.individual.3');
 Route::get('/fill', 'Frontend\HomeController@formFinal')->name('frontend.form.final');
-Route::post('/fill-submit', 'Admin\HomeController@storeForm')->name('frontend.fill.store');
+Route::post('/fill-submit', 'Frontend\HomeController@storeForm')->name('frontend.fill.store');
 Route::get('/thankyou', 'Frontend\HomeController@formThankYou')->name('frontend.form.thank_you');
 
 // ADMIN ROUTE

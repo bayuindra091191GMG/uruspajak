@@ -46,8 +46,7 @@
                 <div class="col-12">
                     <form class="form-inline">
                         <div class="form-group">
-                            <label class="h3 text-custom-black" for="cover">Omzet saya per bulan</label>
-                            <input type="text" id="cover" class="form-control bg-custom-dark-blue mx-sm-3 h3 text-custom-black input-text-custom-style">
+                            <label class="h3 text-custom-black" for="cover">Omzet saya per bulan :</label>
                         </div>
                     </form>
                 </div>

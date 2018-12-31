@@ -10,7 +10,7 @@
 
 @section('content')
     <!-- start banner Area -->
-    <section class="banner-area mt-3">
+    <section class="font-weight-light" style="margin-top: 6rem;">
         <div class="container-fluid">
             <div class="row fullscreen align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6 pb-0 bg-custom-dark-blue border border-left-0 border-right-0 bw-3 border-dark">
@@ -26,7 +26,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="{{ asset('images/frontend/home1.png') }}" height="350"
+                            <img src="{{ asset('images/frontend/home1.png') }}" class="height-home-banner-responsive"
                                  style="position: absolute; bottom: 0; right: 5px;"/>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                         <div class="col-4">
-                            <img src="{{ asset('images/frontend/home2.png') }}" height="350"
+                            <img src="{{ asset('images/frontend/home2.png') }}" class="height-home-banner-responsive"
                                  style="position: absolute; bottom: 0; right: 5px;"/>
                         </div>
                     </div>
@@ -55,7 +55,7 @@
     <!-- End banner Area -->
 
     <!-- welcome Area -->
-    <section class="services-area section-gap">
+    <section class="services-area section-gap font-weight-light">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="menu-content col-lg-7">
@@ -70,11 +70,11 @@
     </section>
     <!-- End welcome Area -->
 
-    <!-- Start services Area -->
-    <section class="services-area mb-3">
+    <!-- Start testimonial Area -->
+    <section class="mb-5 font-weight-light text-italic">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
                             <img src="{{ asset('images/frontend/check.png') }}"/>
@@ -82,13 +82,17 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p><br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
                             <h4>John Doe</h4>
                             <span>@john</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
                             <img src="{{ asset('images/frontend/check.png') }}"/>
@@ -96,13 +100,17 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p><br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
                             <h4>John Doe</h4>
                             <span>@john</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
                             <img src="{{ asset('images/frontend/check.png') }}"/>
@@ -110,13 +118,17 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p><br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
                             <h4>John Doe</h4>
                             <span>@john</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
                             <img src="{{ asset('images/frontend/check.png') }}"/>
@@ -124,7 +136,11 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.</p><br/>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
                             <h4>John Doe</h4>
                             <span>@john</span>
                         </div>
@@ -133,10 +149,10 @@
             </div>
         </div>
     </section>
-    <!-- End services Area -->
+    <!-- End testimonial Area -->
 
     <!-- Start cara kerja intro Area -->
-    <section class="services-area section-gap">
+    <section class="font-weight-light" style="margin-bottom: 6rem;">
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="menu-content col-lg-7">
@@ -151,10 +167,10 @@
     <!-- End cara kerja intro Area -->
 
     <!-- Start cara kerja Area -->
-    <section class="mb-3">
+    <section class="mb-3 font-weight-light">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-12 custom-mb-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="row mb-3">
@@ -165,10 +181,10 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
-                                        <div class="col-md-3 col-12 pr-0">
+                                        <div class="col-md-3 col-2 pr-0">
                                             <h1>1.</h1>
                                         </div>
-                                        <div class="col-md-9 col-12 pl-0">
+                                        <div class="col-md-9 col-10 pl-0">
                                             <h5>Beritahu Kebutuhanmu</h5>
                                         </div>
                                     </div>
@@ -184,7 +200,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-12 custom-mb-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="row mb-3">
@@ -195,10 +211,10 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
-                                        <div class="col-md-3 col-12 pr-0">
+                                        <div class="col-md-3 col-2 pr-0">
                                             <h1>2.</h1>
                                         </div>
-                                        <div class="col-md-9 col-12 pl-0">
+                                        <div class="col-md-9 col-10 pl-0">
                                             <h5>Tanda Tangan Kontrak</h5>
                                         </div>
                                     </div>
@@ -214,7 +230,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-12 custom-mb-6">
                     <div class="card">
                         <div class="card-body">
                             <div class="row mb-3">
@@ -225,10 +241,10 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
-                                        <div class="col-md-3 col-12 pr-0">
+                                        <div class="col-md-3 col-2 pr-0">
                                             <h1>3.</h1>
                                         </div>
-                                        <div class="col-md-9 col-12 pl-0">
+                                        <div class="col-md-9 col-10 pl-0">
                                             <h5>Kami Menghitung Pajak</h5>
                                         </div>
                                     </div>
@@ -244,7 +260,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-12 ">
                     <div class="card">
                         <div class="card-body">
                             <div class="row mb-3">
@@ -255,10 +271,10 @@
                             <div class="row">
                                 <div class="col-12">
                                     <div class="row">
-                                        <div class="col-md-3 col-12 pr-0">
+                                        <div class="col-md-3 col-2 pr-0">
                                             <h1>4.</h1>
                                         </div>
-                                        <div class="col-md-9 col-12 pl-0">
+                                        <div class="col-md-9 col-10 pl-0">
                                             <h5>Kami Melapor Pajak</h5>
                                         </div>
                                     </div>
@@ -279,7 +295,7 @@
     <!-- end WANT A BITE Area -->
 
     <!-- Start WANT A BITE Area -->
-    <section class="mb-3">
+    <section class="mb-3 font-weight-light">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -287,14 +303,14 @@
                         <div class="card-body bg-custom-dark-blue p-0">
                             <div class="row">
                                 <div class="col-md-6 col-12">
-                                    <img src="{{ asset('images/frontend/test-drive.png') }}"/>
+                                    <img src="{{ asset('images/frontend/test-drive.png') }}" class="width-home-image-responsive"/>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div style="height: 265px;">
                                         <div class="box h-100 w-75 d-flex justify-content-center flex-column margin-center">
                                             <h1 class="text-custom-yellow">Want a Bite?</h1>
                                             <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
-                                            <a href="#" class="btn btn-primary w-50 p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Take a test drive</a>
+                                            <a href="#" class="btn btn-primary width-home-button-responsive p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Take a test drive</a>
                                         </div>
                                     </div>
                                 </div>
@@ -308,7 +324,7 @@
     <!-- End WANT A BITE Area -->
 
     <!-- Start MAU KONSULTASI PAJAK? Area -->
-    <section class="mb-3">
+    <section class="mb-3 font-weight-light">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -316,14 +332,14 @@
                         <div class="card-body bg-custom-yellow p-0">
                             <div class="row">
                                 <div class="col-md-6 col-12 text-center">
-                                    <img src="{{ asset('images/frontend/contact.png') }}"/>
+                                    <img src="{{ asset('images/frontend/contact.png') }}" class="width-home-image-responsive"/>
                                 </div>
                                 <div class="col-md-6 col-12">
-                                    <div style="height: 265px;">
+                                    <div id="section_tax_consultation">
                                         <div class="box h-100 w-75 d-flex justify-content-center flex-column margin-center">
                                             <h1 class="text-custom-dark-blue">Mau Konsultasi Pajak?</h1>
                                             <p class="text-custom-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
-                                            <a href="#" class="btn btn-primary w-50 p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Hubungi Kami</a>
+                                            <a href="#" class="btn btn-primary width-home-button-responsive p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Hubungi Kami</a>
                                         </div>
                                     </div>
                                 </div>

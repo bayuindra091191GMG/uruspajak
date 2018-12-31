@@ -5,11 +5,12 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\ContactMessage;
 use App\Models\FormData;
+use App\Models\WpPost;
+use App\Models\WpPostmetum;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\Session;
-use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Validator;
 
 class HomeController extends Controller
 {
@@ -347,24 +348,148 @@ class HomeController extends Controller
 
         $now = Carbon::now('Asia/Jakarta');
 
-        FormData::create([
-            'type'          => $request->input('type'),
-            'zip'           => $request->input('zip'),
-            'who'           => $request->input('who') === 'default' ? null : $request->input('who'),
-            'income'        => $request->input('income') === 'default' ? null : $request->input('income'),
-            'tax_report'    => $request->input('tax_report') === 'default' ? null : $request->input('tax_report'),
-            'omzet'         => $request->input('omzet') === 'default' ? null : $request->input('omzet'),
-            'package'       => $request->input('package') === 'default' ? null : $request->input('package'),
-            'fname'         => $request->input('fname'),
-            'lname'         => $request->input('lname'),
-            'email'         => $request->input('email'),
-            'phone'         => $request->input('phone'),
-            'business'      => $request->input('business'),
-            'city'          => $request->input('city'),
-            'state'         => $request->input('state'),
-            'company_name'  => $request->input('company_name'),
-            'when'          => $request->input('when'),
-            'created_at'    => $now->toDateTimeString()
+        $newWpPost = WpPost::create([
+            'post_author'       => 2,
+            'post_date'         => $now->toDateTimeString(),
+            'post_date_gmt'     => $now->toDateTimeString(),
+            'post_content'      => "",
+            'post_title'        => "",
+            'post_excerpt'      => "",
+            'post_status'       => "publish",
+            'comment_status'    => "closed",
+            'ping_status'       => "closed",
+            'post_password'     => "",
+            'to_ping'           => "" ,
+            'pinged'            => "",
+            'post_modified'     => $now->toDateTimeString(),
+            'post_modified_gmt' => $now->toDateTimeString(),
+            'post_content_filtered' => "",
+            'post_parent'       => 0,
+            'menu_order'        => 0,
+            'post_type'         => "nf_sub",
+            'post_mime_type'    => "",
+            'comment_count'     => 0
+        ]);
+
+        $newWpPost->post_name = $newWpPost->ID;
+        $newWpPost->guid = 'http://blog.uruspajak.id/index.php/nf_sub/'. $newWpPost->ID. '/';
+        $newWpPost->save();
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_6',
+            'meta_value'    => $request->input('type')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_5',
+            'meta_value'    => $request->input('zip')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_17',
+            'meta_value'    => $request->input('who') === 'default' ? '' : $request->input('who')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_18',
+            'meta_value'    => $request->input('income') === 'default' ? '' : $request->input('income')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_19',
+            'meta_value'    => $request->input('tax_report') === 'default' ? '' : $request->input('tax_report')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_20',
+            'meta_value'    => $request->input('omzet') === 'default' ? '' : $request->input('omzet')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_7',
+            'meta_value'    => $request->input('package') === 'default' ? '' : $request->input('package')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_8',
+            'meta_value'    => $request->input('fname')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_9',
+            'meta_value'    => $request->input('lname')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_2',
+            'meta_value'    => $request->input('email')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_10',
+            'meta_value'    => $request->input('phone')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_11',
+            'meta_value'    => $request->input('business')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_12',
+            'meta_value'    => $request->input('city')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_13',
+            'meta_value'    => $request->input('state')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_15',
+            'meta_value'    => $request->input('company_name')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_field_1',
+            'meta_value'    => $request->input('when')
+        ]);
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_form_id',
+            'meta_value'    => '1'
+        ]);
+
+        // Get last sequence number
+        $postMetaList = WpPostmetum::where('meta_key', '_seq_num')
+            ->orderBy('post_id', 'desc')
+            ->get();
+
+        $lastSeqNum = $postMetaList->first()->meta_value;
+        $lastSeqNumInt = (int) $lastSeqNum;
+        $lastSeqNumInt++;
+
+        WpPostmetum::create([
+            'post_id'       => $newWpPost->ID,
+            'meta_key'      => '_seq_num',
+            'meta_value'    => $lastSeqNumInt. ''
         ]);
 
         return redirect()->route('frontend.form.thank_you', ['type' => $request->input('type')]);

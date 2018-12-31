@@ -8,7 +8,7 @@
                     <br/><br/>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem.</p>
                 </div>
-                <div class="col-md-3 col-12">
+                <div class="col-md-3 col-12 mb-3 mb-md-0">
                     <h4>Services</h4>
                     <br/>
                     <ul class="list-unstyled">
@@ -19,7 +19,7 @@
                         <li class="py-1">eFIN - PKP - e-Faktur</li>
                     </ul>
                 </div>
-                <div class="col-md-3 col-12">
+                <div class="col-md-3 col-12 mb-3 mb-md-0">
                     <h4>Company</h4>
                     <br/>
                     <ul class="list-unstyled">
