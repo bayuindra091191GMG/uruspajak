@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <section class="section-gap mb-100">
+    <section class="section-gap mb-header-responsive">
         <div class="container">
             <div class="row">
                 <div class="col-12">

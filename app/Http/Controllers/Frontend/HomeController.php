@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Models\ContactMessage;
-use App\Models\FormData;
 use App\Models\WpPost;
 use App\Models\WpPostmetum;
 use Carbon\Carbon;
@@ -38,25 +36,13 @@ class HomeController extends Controller
         return view('frontend.form-business.form-business-1');
     }
 
-    public function formBusiness2(Request $request){
-        if(empty($request->zip)){
-            return Redirect::route('frontend.form.business.1');
-        }
-
-        $zip = $request->zip;
-
-        return view('frontend.form-business.form-business-2', compact('zip'));
+    public function formBusiness2(){
+        return view('frontend.form-business.form-business-2');
     }
 
     public function formBusiness3(Request $request){
-        if(empty($request->zip)){
-            return Redirect::route('frontend.form.business.1');
-        }
-
-        $zip = $request->zip;
-
         if(empty($request->tax_report)){
-            return Redirect::route('frontend.form.business.2', ['zip' => $zip]);
+            return Redirect::route('frontend.form.business.2');
         }
 
         if($request->tax_report == 'option1'){
@@ -70,7 +56,6 @@ class HomeController extends Controller
         }
 
         $data = [
-            'zip'               => $zip,
             'tax_report_option' => $request->tax_report,
             'tax_report'        => $tax_report
         ];
@@ -79,14 +64,8 @@ class HomeController extends Controller
     }
 
     public function formBusiness4(Request $request){
-        if(empty($request->zip)){
-            return Redirect::route('frontend.form.business.1');
-        }
-
-        $zip = $request->zip;
-
         if(empty($request->tax_report)){
-            return Redirect::route('frontend.form.business.2', ['zip' => $zip]);
+            return Redirect::route('frontend.form.business.2');
         }
 
         if($request->tax_report == 'option1'){
@@ -100,7 +79,7 @@ class HomeController extends Controller
         }
 
         if(empty($request->omzet)){
-            return Redirect::route('frontend.form.business.3', ['zip' => $zip, 'tax_report' => $request->tax_report]);
+            return Redirect::route('frontend.form.business.3', ['tax_report' => $request->tax_report]);
         }
 
         if($request->omzet == 'option1'){
@@ -112,7 +91,6 @@ class HomeController extends Controller
         else{
             $finalData = [
                 'type'          => 'business',
-                'zip'           => $zip,
                 'tax_report'    => $request->tax_report,
                 'omzet'         => $request->omzet
             ];
@@ -121,7 +99,6 @@ class HomeController extends Controller
         }
 
         $data = [
-            'zip'                   => $zip,
             'tax_report'            => $tax_report,
             'tax_report_option'     => $request->tax_report,
             'omzet'                 => $omzet,
@@ -135,23 +112,11 @@ class HomeController extends Controller
         return view('frontend.form-individual.form-individual-1');
     }
 
-    public function formIndividual2(Request $request){
-        if(empty($request->zip)){
-            return Redirect::route('frontend.form.individual.1');
-        }
-
-        $zip = $request->zip;
-
-        return view('frontend.form-individual.form-individual-2', compact('zip'));
+    public function formIndividual2(){
+        return view('frontend.form-individual.form-individual-2');
     }
 
     public function formIndividual3(Request $request){
-        if(empty($request->zip)){
-            return Redirect::route('frontend.form.individual.1');
-        }
-
-        $zip = $request->zip;
-
         if(empty($request->who)){
             return Redirect::back();
         }
@@ -168,7 +133,6 @@ class HomeController extends Controller
         else{
             $finalData = [
                 'type'          => 'individual',
-                'zip'           => $zip,
                 'who'           => $request->who
             ];
 
@@ -176,8 +140,7 @@ class HomeController extends Controller
         }
 
         $data = [
-            'zip'       => $zip,
-            'who'       => $who,
+            'who'           => $who,
             'who_option'    => $request->who
         ];
 
@@ -185,7 +148,7 @@ class HomeController extends Controller
     }
 
     public function formFinal(Request $request){
-        if(empty($request->type) || empty($request->zip)){
+        if(empty($request->type)){
             return Redirect::back();
         }
 
@@ -249,7 +212,6 @@ class HomeController extends Controller
 
             $data = [
                 'type'          => $request->type,
-                'zip'           => $request->zip,
                 'who'           => $who,
                 'income'        => $income,
                 'tax_report'    => $tax_report,
@@ -298,7 +260,6 @@ class HomeController extends Controller
 
             $data = [
                 'type'          => $request->type,
-                'zip'           => $request->zip,
                 'tax_report'    => $tax_report,
                 'omzet'         => $omzet,
                 'package'       => $package,

@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <section class="section-gap mb-100">
+    <section class="section-gap mb-header-responsive">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -28,12 +28,6 @@
             <div class="row mb-2">
                 <div class="col-12">
                     <span class="text-custom-black">Let's get you a quote - it only takes a few second</span><br/>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-12">
-                    <span class="h4 text-custom-gray">Kode ZIP saya adalah </span>
-                    <span class="h4 text-custom-gray text-custom-underline">{{ $zip }}</span>
                 </div>
             </div>
             <div class="row mb-2">
@@ -95,7 +89,7 @@
     <script>
         function goNext(){
             var option = $('input[name=who]:checked').val();
-            window.location = '{{ route('frontend.form.individual.3') }}?zip=' + '{{ $zip }}' + '&who=' + option;
+            window.location = '{{ route('frontend.form.individual.3') }}?who=' + option;
         }
     </script>
 @endsection

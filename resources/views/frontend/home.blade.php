@@ -21,7 +21,7 @@
                                 <div class="box h-100 d-flex justify-content-center flex-column margin-center">
                                     <h1 class="text-custom-yellow">Business.</h1>
                                     <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
-                                    <a href="{{ route('frontend.form.business.1') }}" class="btn btn-primary w-75 p-1 bg-custom-yellow bw-2 border-dark text-custom-black">Pick your plan</a>
+                                    <a href="{{ route('frontend.form.business.2') }}" class="btn btn-primary w-75 p-1 bg-custom-yellow bw-2 border-dark text-custom-black">Pick your plan</a>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                 <div class="box h-100 d-flex justify-content-center flex-column margin-center">
                                     <h1 class="text-custom-dark-blue">Individual.</h1>
                                     <p class="text-custom-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
-                                    <a href="{{ route('frontend.form.individual.1') }}" class="btn btn-primary w-75 p-1 bg-custom-dark-blue bw-2 border-dark text-custom-white">Pick your plan</a>
+                                    <a href="{{ route('frontend.form.individual.2') }}" class="btn btn-primary w-75 p-1 bg-custom-dark-blue bw-2 border-dark text-custom-white">Pick your plan</a>
                                 </div>
                             </div>
                         </div>

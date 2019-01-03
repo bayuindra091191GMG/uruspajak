@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-    <section class="mt-4">
+    <section class="section-gap mb-header-responsive">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -27,12 +27,6 @@
             <div class="row mb-2">
                 <div class="col-12">
                     <span class="text-custom-white">Let's get you a quote - it only takes a few second</span><br/>
-                </div>
-            </div>
-            <div class="row mb-2">
-                <div class="col-12">
-                    <span class="h4 text-custom-gray">Kode ZIP saya adalah </span>
-                    <span class="h4 text-custom-gray text-custom-underline">{{ $zip }}</span>
                 </div>
             </div>
             <div class="row mb-2">
@@ -141,7 +135,6 @@
                                 <td colspan="2" class="border-bottom border-left border-right bw-3 border-dark text-center">
                                     <a href="{{ route('frontend.form.final',
                                     ['type' => 'business',
-                                    'zip' => $zip,
                                     'tax_report' => $tax_report_option,
                                     'omzet' => $omzet_option,
                                     'package' => 'small']) }}" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
@@ -149,7 +142,6 @@
                                 <td colspan="2" class="border-bottom border-right bw-3 border-dark text-center">
                                     <a href="{{ route('frontend.form.final',
                                     ['type' => 'business',
-                                    'zip' => $zip,
                                     'tax_report' => $tax_report_option,
                                     'omzet' => $omzet_option,
                                     'package' => 'business']) }}" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
@@ -157,7 +149,6 @@
                                 <td colspan="2" class="border-bottom border-right bw-3 border-dark text-center">
                                     <a href="{{ route('frontend.form.final',
                                     ['type' => 'business',
-                                    'zip' => $zip,
                                     'tax_report' => $tax_report_option,
                                     'omzet' => $omzet_option,
                                     'package' => 'enterpreneur']) }}" class="btn btn-primary w-75 mb-minus-45 bw-3 bg-custom-yellow border-dark text-custom-black">Choose</a>
