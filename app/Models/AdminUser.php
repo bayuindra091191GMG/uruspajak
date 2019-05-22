@@ -52,7 +52,6 @@ class AdminUser extends Authenticatable
 	];
 
 	protected $fillable = [
-		'is_super_admin',
 		'role_id',
 		'first_name',
 		'last_name',

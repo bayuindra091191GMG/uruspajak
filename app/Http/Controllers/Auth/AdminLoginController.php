@@ -27,7 +27,7 @@ class AdminLoginController extends Controller
         ]);
 
         if(Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])){
-            return Redirect::route('admin.contact-messages.index');
+            return Redirect::route('admin.dashboard');
         }
         else{
             return redirect()->back()->withErrors('Wrong Email or Password!!', 'default')->withInput($request->only('email'));

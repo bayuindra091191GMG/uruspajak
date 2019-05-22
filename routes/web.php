@@ -35,7 +35,7 @@ Route::get('/thankyou', 'Frontend\HomeController@formThankYou')->name('frontend.
 // ====================================================================================================================
 
 Route::prefix('admin')->group(function(){
-    Route::get('/', 'Admin\ContactMessageController@index')->name('admin.dashboard');
+    Route::get('/', 'Admin\AdminController@index')->name('admin.dashboard');
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
@@ -89,13 +89,11 @@ Route::prefix('admin')->group(function(){
     Route::post('/vouchers/update', 'Admin\VoucherController@update')->name('admin.vouchers.update');
     Route::post('/vouchers/delete', 'Admin\VoucherController@destroy')->name('admin.vouchers.destroy');
 
-    // FAQ
-    Route::get('/faqs', 'Admin\FaqController@index')->name('admin.faqs.index');
-    Route::get('/faqs/create', 'Admin\FaqController@create')->name('admin.faqs.create');
-    Route::post('/faqs/store', 'Admin\FaqController@store')->name('admin.faqs.store');
-    Route::get('/faqs/edit/{item}', 'Admin\FaqController@edit')->name('admin.faqs.edit');
-    Route::post('/faqs/update', 'Admin\FaqController@update')->name('admin.faqs.update');
-    Route::post('/faqs/delete', 'Admin\FaqController@destroy')->name('admin.faqs.destroy');
+    // Footer
+    Route::get('/footer', 'Admin\FooterController@index')->name('admin.footer.index');
+    Route::post('/footer/update', 'Admin\FooterController@update')->name('admin.footer.update');
+    Route::post('/footer/column/item/store', 'Admin\FooterController@storeColumnItem')->name('admin.footer.item.store');
+    Route::post('/footer/column/item/update', 'Admin\FooterController@updateColumnItem')->name('admin.footer.item.update');
 
     // Product
     Route::get('/product/', 'Admin\ProductController@index')->name('admin.product.index');

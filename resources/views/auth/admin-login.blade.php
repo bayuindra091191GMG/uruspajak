@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <h3>F.O.R <br> Facilitated Office Residence</h3>
+    <h3>URUSPAJAK.ID</h3>
     <p>Admin Login</p>
 
     <form method="POST" action="{{ route('admin.login.submit') }}">

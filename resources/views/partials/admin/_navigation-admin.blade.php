@@ -38,8 +38,8 @@
             </div>
             <ul class="sidebar-menu">
                 <li class="treeview">
-                    <a href="{{ route('admin.contact-messages.index') }}">
-                        <i class="icon icon-message text-green s-18"></i>Contact Us
+                    <a href="{{ route('admin.footer.index') }}">
+                        <i class="icon icon-message text-green s-18"></i>Footer
                     </a>
                 </li>
                 <li class="treeview">
