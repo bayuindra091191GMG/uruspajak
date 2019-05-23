@@ -12,7 +12,6 @@
     CSS
     ============================================= -->
     <link rel="stylesheet" href="{{ asset('template/css/linearicons.css') }}">
-    <link rel="stylesheet" href="{{ asset('template/css/font-awesome.min.css') }}">
     <link rel="stylesheet" href="{{ asset('template/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('template/css/magnific-popup.css') }}">
     <link rel="stylesheet" href="{{ asset('template/css/jquery-ui.css') }}">

@@ -32,6 +32,7 @@
             left: 50%;
         }
     </style>
+    @yield('styles')
 </head>
 <body class="light">
 <!-- Pre loader -->
@@ -87,7 +88,6 @@
         @yield('content')
     </div>
 </div>
-@yield('styles')
 <!-- Scripts -->
 <script src="{{ asset('js/backend/app.js') }}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.9/summernote-bs4.js"></script>

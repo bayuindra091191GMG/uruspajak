@@ -39,12 +39,12 @@
             <ul class="sidebar-menu">
                 <li class="treeview">
                     <a href="{{ route('admin.footer.index') }}">
-                        <i class="icon icon-message text-green s-18"></i>Footer
+                        <i class="icon icon-message text-green s-18"></i>FOOTER
                     </a>
                 </li>
                 <li class="treeview">
-                    <a href="{{ route('admin.subscribes.index') }}">
-                        <i class="icon icon-message text-green s-18"></i>Subscribers
+                    <a href="{{ route('admin.package.index') }}">
+                        <i class="icon icon-message text-green s-18"></i>PACKAGE
                     </a>
                 </li>
             </ul>

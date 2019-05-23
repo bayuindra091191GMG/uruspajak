@@ -96,11 +96,12 @@ Route::prefix('admin')->group(function(){
     Route::post('/footer/column/item/update', 'Admin\FooterController@updateColumnItem')->name('admin.footer.item.update');
     Route::post('/footer/column/item/destroy', 'Admin\FooterController@destroyColumnItem')->name('admin.footer.item.destroy');
 
-    // Product
-    Route::get('/product/', 'Admin\ProductController@index')->name('admin.product.index');
-    Route::get('/product/show/{item}', 'Admin\ProductController@show')->name('admin.product.show');
-    Route::get('/product/create', 'Admin\ProductController@create')->name('admin.product.create');
-    Route::post('/product/store', 'Admin\ProductController@store')->name('admin.product.store');
+    // Footer
+    Route::get('/package', 'Admin\PackageDataController@index')->name('admin.package.index');
+    Route::post('/package/update', 'Admin\PackageDataController@update')->name('admin.package.update');
+    Route::post('/package/column/item/store', 'Admin\PackageDataController@storeColumnItem')->name('admin.package.item.store');
+    Route::post('/package/column/item/update', 'Admin\PackageDataController@updateColumnItem')->name('admin.package.item.update');
+    Route::post('/package/column/item/destroy', 'Admin\PackageDataController@destroyColumnItem')->name('admin.package.item.destroy');
 
     Route::get('/product/create-customize/{item}', 'Admin\ProductController@createCustomize')->name('admin.product.create.customize');
     Route::post('/product/store-customize/{item}', 'Admin\ProductController@storeCustomize')->name('admin.product.store.customize');
