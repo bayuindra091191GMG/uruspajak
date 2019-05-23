@@ -94,6 +94,7 @@ Route::prefix('admin')->group(function(){
     Route::post('/footer/update', 'Admin\FooterController@update')->name('admin.footer.update');
     Route::post('/footer/column/item/store', 'Admin\FooterController@storeColumnItem')->name('admin.footer.item.store');
     Route::post('/footer/column/item/update', 'Admin\FooterController@updateColumnItem')->name('admin.footer.item.update');
+    Route::post('/footer/column/item/destroy', 'Admin\FooterController@destroyColumnItem')->name('admin.footer.item.destroy');
 
     // Product
     Route::get('/product/', 'Admin\ProductController@index')->name('admin.product.index');

@@ -43,13 +43,22 @@ class FooterController extends Controller
         $addressLine2 = $footerData->where('field', 'address_line_2')
             ->first();
 
-        $addressLine3 = $footerData->where('field', 'address_line_3')
-            ->first();
-
         $contactPhone = $footerData->where('field', 'contact_phone')
             ->first();
 
         $contactEmail = $footerData->where('field', 'contact_email')
+            ->first();
+
+        $copyright = $footerData->where('field', 'copyright')
+            ->first();
+
+        $facebookLink = $footerData->where('field', 'facebook')
+            ->first();
+
+        $twitterLink = $footerData->where('field', 'twitter')
+            ->first();
+
+        $instagramLink = $footerData->where('field', 'instagram')
             ->first();
 
         $column2Contents = $footerData->where('column', 2)
@@ -69,9 +78,12 @@ class FooterController extends Controller
             'columnTitle3'      => $columnTitle3->content,
             'addressLine1'      => $addressLine1->content,
             'addressLine2'      => $addressLine2->content,
-            'addressLine3'      => $addressLine3->content,
             'contactPhone'      => $contactPhone->content,
             'contactEmail'      => $contactEmail->content,
+            'copyright'         => $copyright->content,
+            'facebookLink'      => $facebookLink->link,
+            'twitterLink'       => $twitterLink->link,
+            'instagramLink'     => $instagramLink->link,
             'column2Contents'   => $column2Contents,
             'column3Contents'   => $column3Contents,
             'column2AutoIndex'  => $column2AutoIndex,
@@ -112,11 +124,6 @@ class FooterController extends Controller
         $addressLine2->content = $request->input('address_line_2') ?? "";
         $addressLine2->save();
 
-        $addressLine3 = $footerData->where('field', 'address_line_3')
-            ->first();
-        $addressLine3->content = $request->input('address_line_3') ?? "";
-        $addressLine3->save();
-
         $contactPhone = $footerData->where('field', 'contact_phone')
             ->first();
         $contactPhone->content = $request->input('contact_phone') ?? "";
@@ -126,6 +133,26 @@ class FooterController extends Controller
             ->first();
         $contactEmail->content = $request->input('contact_email') ?? "";
         $contactEmail->save();
+
+        $copyright = $footerData->where('field', 'copyright')
+            ->first();
+        $copyright->content = $request->input('copyright') ?? "";
+        $copyright->save();
+
+        $facebookLink = $footerData->where('field', 'facebook')
+            ->first();
+        $facebookLink->link = $request->input('facebook') ?? "";
+        $facebookLink->save();
+
+        $twitterLink = $footerData->where('field', 'twitter')
+            ->first();
+        $twitterLink->link = $request->input('twitter') ?? "";
+        $twitterLink->save();
+
+        $instagramLink = $footerData->where('field', 'instagram')
+            ->first();
+        $instagramLink->link = $request->input('instagram') ?? "";
+        $instagramLink->save();
 
         Session::flash('success', 'Successfully update footer');
         return redirect()->route('admin.footer.index');
@@ -183,8 +210,9 @@ class FooterController extends Controller
         }
 
         if($editedColumnItem->index != $editedIndex){
-            //dd("true");
             if($editedColumnItem->index - 1 == $editedIndex || $editedColumnItem->index + 1 == $editedIndex){
+
+                // Switch index
                 $tmpColumnItem = FooterDatum::where('index', $editedIndex)
                     ->where('column', $editedColumnItem->column)
                     ->first();
@@ -194,8 +222,11 @@ class FooterController extends Controller
             }
             else {
                 if($editedIndex > $editedColumnItem->index){
+
+                    // Reorder index
                     $changedColumnItems = FooterDatum::where('index', '>', $editedColumnItem->index)
                         ->where('index', '<=', $editedIndex)
+                        ->where('column', $editedColumnItem->column)
                         ->get();
 
                     foreach ($changedColumnItems as $columnItem){
@@ -204,8 +235,11 @@ class FooterController extends Controller
                     }
                 }
                 else if($editedIndex < $editedColumnItem->index){
+
+                    // Reorder index
                     $changedColumnItems = FooterDatum::where('index', '<=', $editedColumnItem->index)
                         ->where('index', '>', $editedIndex)
+                        ->where('column', $editedColumnItem->column)
                         ->get();
 
                     foreach ($changedColumnItems as $columnItem){
@@ -220,6 +254,27 @@ class FooterController extends Controller
         $editedColumnItem->save();
 
         Session::flash('success', 'Successfully updated new column 2 item');
+        return redirect()->route('admin.footer.index');
+    }
+
+    public function destroyColumnItem(Request $request){
+        $deletedId = $request->input('deleted_id');
+        $deletedColumnItem = FooterDatum::find($deletedId);
+
+        // Reorder index
+        $changedColumnItems = FooterDatum::where('index', '>', $deletedColumnItem->index)
+            ->where('field', 'navigation')
+            ->where('column', $deletedColumnItem->column)
+            ->get();
+
+        foreach ($changedColumnItems as $columnItem){
+            $columnItem->index -= 1;
+            $columnItem->save();
+        }
+
+        $deletedColumnItem->delete();
+
+        Session::flash('success', 'Successfully removed a column item');
         return redirect()->route('admin.footer.index');
     }
 }

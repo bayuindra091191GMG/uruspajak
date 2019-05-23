@@ -172,6 +172,10 @@ body{
     padding-bottom: 0;
 }
 
+.footer-area a {
+    color: #000 !important;
+}
+
 @media (min-width: 576px) {
 
 }

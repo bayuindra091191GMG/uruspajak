@@ -6,49 +6,58 @@
                 <div class="col-md-3 col-12">
                     <img src="{{ asset('images/frontend/logo1.png') }}" height="45"/>
                     <br/><br/>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem.</p>
+                    <p>{{ $columnParagraph1 }}</p>
                 </div>
                 <div class="col-md-3 col-12 mb-3 mb-md-0">
-                    <h4>Services</h4>
+                    <h4>{{ $columnTitle2 }}</h4>
                     <br/>
                     <ul class="list-unstyled">
-                        <li class="py-1">Pajak Pribadi</li>
-                        <li class="py-1">Pajak Tahunan</li>
-                        <li class="py-1">Laporan Keuangan</li>
-                        <li class="py-1">Konsultasi Pajak</li>
-                        <li class="py-1">eFIN - PKP - e-Faktur</li>
+                        @foreach($column2Contents as $content)
+                            <li class="py-1">
+                                <a href="{{ !empty($content->link) ? $content->link : '#' }}">{{ $content->content }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-md-3 col-12 mb-3 mb-md-0">
-                    <h4>Company</h4>
+                    <h4>{{ $columnTitle3 }}</h4>
                     <br/>
                     <ul class="list-unstyled">
-                        <li class="py-1">Tentang Kami</li>
-                        <li class="py-1">Seri Perpajakan</li>
-                        <li class="py-1">KSWP</li>
-                        <li class="py-1">Testimonial</li>
-                        <li class="py-1">FAQ</li>
+                        @foreach($column3Contents as $content)
+                            <li class="py-1">
+                                <a href="{{ !empty($content->link) ? $content->link : '#' }}">{{ $content->content }}</a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="col-md-3 col-12">
                     <h4>Contact Us</h4>
                     <br/>
-                    <span>Infiti Office, Permata Regency D/37, Kembangan</span><br/>
-                    <span>Jakarta 11630</span>
+                    <span>{{ $addressLine1 }}</span><br/>
+                    <span>{{ $addressLine2 }}</span>
                     <br/><br/>
-                    <span class="text-custom-dark-blue">+62 21 5020-5002</span><br/>
-                    <span class="text-custom-dark-blue">mau@uruspajak.id</span>
+                    <span class="text-custom-dark-blue">{{ $contactPhone }}</span><br/>
+                    <span class="text-custom-dark-blue">{{ $contactEmail }}</span>
                 </div>
             </div>
             <hr/>
             <div class="row">
                 <div class="col-md-6 col-12">
-                    <h5>@ 2018 PT Sasana Konsulia Global x Infiniti Office</h5>
+                    <h5>{{ $copyright }}</h5>
                 </div>
                 <div class="col-md-6 col-12 text-right">
-                    <i class="fab fa-facebook fa-2x"></i>&nbsp;&nbsp;
-                    <i class="fab fa-twitter fa-2x"></i>&nbsp;&nbsp;
-                    <i class="fab fa-instagram fa-2x"></i>&nbsp;&nbsp;
+                    <a href="{{ !empty($facebookLink) ? $facebookLink : '#' }}">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="{{ !empty($twitterLink) ? $twitterLink : '#' }}">
+                        <i class="fab fa-twitter fa-2x"></i>
+                    </a>
+                    &nbsp;&nbsp;
+                    <a href="{{ !empty($instagramLink) ? $instagramLink : '#' }}">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    &nbsp;&nbsp;
                 </div>
             </div>
         </div>

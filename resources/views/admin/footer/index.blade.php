@@ -56,11 +56,6 @@
                                            placeholder="Street, State, City, Zip Code" value="{{ $addressLine2 }}">
                                 </div>
                                 <div class="form-group">
-                                    <label for="address_line_3" class="col-form-label">Address Line 3</label>
-                                    <input type="text" class="form-control" id="address_line_3" name="address_line_3"
-                                           placeholder="Street, State, City, Zip Code" value="{{ $addressLine3 }}">
-                                </div>
-                                <div class="form-group">
                                     <label for="contact_phone" class="col-form-label">Contact Phone</label>
                                     <input type="text" class="form-control" id="contact_phone" name="contact_phone"
                                            placeholder="Phone Number" value="{{ $contactPhone }}">
@@ -69,6 +64,26 @@
                                     <label for="contact_email" class="col-form-label">Contact Email</label>
                                     <input type="text" class="form-control" id="contact_email" name="contact_email"
                                            placeholder="Email Address" value="{{ $contactEmail }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="copyright" class="col-form-label">Copyright</label>
+                                    <input type="text" class="form-control" id="copyright" name="copyright"
+                                           placeholder="Copyright Section" value="{{ $copyright }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="facebook" class="col-form-label">Facebook Link</label>
+                                    <input type="text" class="form-control" id="facebook" name="facebook"
+                                           placeholder="Facebook Link" value="{{ $facebookLink }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="twitter" class="col-form-label">Twitter Link</label>
+                                    <input type="text" class="form-control" id="twitter" name="twitter"
+                                           placeholder="Twitter Link" value="{{ $twitterLink }}">
+                                </div>
+                                <div class="form-group">
+                                    <label for="instagram" class="col-form-label">Instagram Link</label>
+                                    <input type="text" class="form-control" id="instagram" name="instagram"
+                                           placeholder="Instagram Link" value="{{ $instagramLink }}">
                                 </div>
                             {{ Form::close() }}
                         </div>
@@ -110,7 +125,8 @@
                                                             data-link="{{ $content->link ?? "" }}">
                                                         <i class="icon-edit"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-danger content-delete">
+                                                    <button type="button" class="btn btn-danger content-delete"
+                                                            data-id="{{ $content->id }}">
                                                         <i class="icon-close"></i>
                                                     </button>
                                                 </td>
@@ -157,7 +173,8 @@
                                                             data-link="{{ $content->link ?? "" }}">
                                                         <i class="icon-edit"></i>
                                                     </button>
-                                                    <button type="button" class="btn btn-danger content-delete">
+                                                    <button type="button" class="btn btn-danger content-delete"
+                                                            data-id="{{ $content->id }}">
                                                         <i class="icon-close"></i>
                                                     </button>
                                                 </td>
@@ -248,6 +265,32 @@
             </div>
         </div>
     </div>
+
+    <div id="deleteModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    {{ Form::open(['route'=>['admin.footer.item.destroy'],'method' => 'post','id' => 'form_column_item_delete']) }}
+                        <h3>Are you sure you want to remove this content?</h3>
+                        <br/>
+                        <input type="hidden" id="deleted_id" name="deleted_id"/>
+                    {{ Form::close() }}
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-warning" data-dismiss="modal">
+                            <i class="icon-close"></i> CANCEL
+                        </button>
+                        <button type="button" class="btn btn-danger delete">
+                            <i class="icon-check"></i> REMOVE
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
 
 @section('styles')
@@ -297,6 +340,19 @@
 
         $('#editModal').on('click', '.update', function(){
             $('#form_column_item_update').submit();
+        });
+
+        $(document).on('click', '.content-delete', function(){
+            $('#deleteModal').modal({
+                backdrop: 'static',
+                keyboard: false
+            });
+
+            $('#deleted_id').val($(this).data('id'));
+        });
+
+        $('#deleteModal').on('click', '.delete', function(){
+            $('#form_column_item_delete').submit();
         });
     </script>
 @endsection
