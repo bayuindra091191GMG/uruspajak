@@ -47,6 +47,16 @@
                         <i class="icon icon-message text-green s-18"></i>PACKAGE
                     </a>
                 </li>
+                <li class="treeview">
+                    <a href="{{ route('admin.testimonial.index') }}">
+                        <i class="icon icon-message text-green s-18"></i>TESTIMONIAL
+                    </a>
+                </li>
+                <li class="treeview">
+                    <a href="{{ route('admin.carakerja.index') }}">
+                        <i class="icon icon-message text-green s-18"></i>CARA KERJA
+                    </a>
+                </li>
             </ul>
         </section>
     </aside>

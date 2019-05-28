@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\WpPost;
 use App\Models\WpPostmetum;
+use App\Models\TestimonialDatum;
+use App\Models\CarakerjaDatum;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -29,7 +31,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('frontend.home');
+        $testimonialData = testimonialDatum::all();
+        $content = testimonialDatum::select('content')->where('column', 1)->where('index', 1)->first();
+
+        $carakerjaData = carakerjaDatum::all();
+        $content = carakerjaDatum::select('content')->where('column', 1)->where('index', 1)->first();
+        
+        $data = [
+            'testimonials' => $testimonialData,
+            'cara_kerja' => $carakerjaData
+        ];
+        return view('frontend.home')->with($data);
+
     }
 
     public function formBusiness1(){

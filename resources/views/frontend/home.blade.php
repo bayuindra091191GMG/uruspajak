@@ -74,6 +74,31 @@
     <section class="mb-5 font-weight-light text-italic">
         <div class="container">
             <div class="row">
+                
+                @php($content = $testimonials->where('column', 1)->where('index', 1)->first())
+                @php($name = $testimonials->where('column', 1)->where('index', 2)->first())
+                @php($name2 = $testimonials->where('column', 1)->where('index', 3)->first())
+                        <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <img src="{{ asset('images/frontend/check.png') }}"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>{{$content->content}}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4>{{$name->content}}</h4>
+                                    <span>{{$name2->content}}</span>
+                                </div>
+                            </div>
+                        </div>
+                @php($content = $testimonials->where('column', 2)->where('index', 5)->first())
+                @php($name = $testimonials->where('column', 2)->where('index', 6)->first())
+                @php($name2 = $testimonials->where('column', 2)->where('index', 7)->first())
                 <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
@@ -82,16 +107,19 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                            <p>{{$content->content}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h4>John Doe</h4>
-                            <span>@john</span>
+                            <h4>{{$name->content}}</h4>
+                            <span>{{$name2->content}}</span>
                         </div>
                     </div>
                 </div>
+                @php($content = $testimonials->where('column', 3)->where('index', 9)->first())
+                @php($name = $testimonials->where('column', 3)->where('index', 10)->first())
+                @php($name2 = $testimonials->where('column', 3)->where('index', 11)->first())
                 <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
@@ -100,16 +128,19 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                            <p>{{$content->content}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h4>John Doe</h4>
-                            <span>@john</span>
+                            <h4>{{$name->content}}</h4>
+                            <span>{{$name2->content}}</span>
                         </div>
                     </div>
                 </div>
+                @php($content = $testimonials->where('column', 4)->where('index', 13)->first())
+                @php($name = $testimonials->where('column', 4)->where('index', 14)->first())
+                @php($name2 = $testimonials->where('column', 4)->where('index', 15)->first())
                 <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
                     <div class="row mb-3">
                         <div class="col-12">
@@ -118,31 +149,13 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
+                            <p>{{$content->content}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h4>John Doe</h4>
-                            <span>@john</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-12 mb-2 mb-md-0">
-                    <div class="row mb-3">
-                        <div class="col-12">
-                            <img src="{{ asset('images/frontend/check.png') }}"/>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales.</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <h4>John Doe</h4>
-                            <span>@john</span>
+                            <h4>{{$name->content}}</h4>
+                            <span>{{$name2->content}}</span>
                         </div>
                     </div>
                 </div>
@@ -170,6 +183,8 @@
     <section class="mb-3 font-weight-light">
         <div class="container">
             <div class="row">
+                @php($title = $cara_kerja->where('column', 1)->where('index', 1)->first())
+                @php($content = $cara_kerja->where('column', 1)->where('index', 1)->first())
                 <div class="col-md-3 col-12 custom-mb-6">
                     <div class="card">
                         <div class="card-body">
@@ -185,7 +200,7 @@
                                             <h1>1.</h1>
                                         </div>
                                         <div class="col-md-9 col-10 pl-0">
-                                            <h5>Beritahu Kebutuhanmu</h5>
+                                            <h5>{{$title->title}}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -193,13 +208,14 @@
                             <div class="row">
                                 <div class="col-12">
                                     <hr class="w-25 bw-3 ml-0"/>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
+                                    {{$content->content}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                @php($title = $cara_kerja->where('column', 2)->where('index', 2)->first())
+                @php($content = $cara_kerja->where('column', 2)->where('index', 2)->first())
                 <div class="col-md-3 col-12 custom-mb-6">
                     <div class="card">
                         <div class="card-body">
@@ -215,7 +231,7 @@
                                             <h1>2.</h1>
                                         </div>
                                         <div class="col-md-9 col-10 pl-0">
-                                            <h5>Tanda Tangan Kontrak</h5>
+                                            <h5>{{$title->title}}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -223,13 +239,14 @@
                             <div class="row">
                                 <div class="col-12">
                                     <hr class="w-25 bw-3 ml-0"/>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
+                                    {{$content->content}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                @php($title = $cara_kerja->where('column', 3)->where('index', 3)->first())
+                @php($content = $cara_kerja->where('column', 3)->where('index', 3)->first())
                 <div class="col-md-3 col-12 custom-mb-6">
                     <div class="card">
                         <div class="card-body">
@@ -245,7 +262,7 @@
                                             <h1>3.</h1>
                                         </div>
                                         <div class="col-md-9 col-10 pl-0">
-                                            <h5>Kami Menghitung Pajak</h5>
+                                            <h5>{{$title->title}}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -253,13 +270,14 @@
                             <div class="row">
                                 <div class="col-12">
                                     <hr class="w-25 bw-3 ml-0"/>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
+                                    {{$content->content}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                @php($title = $cara_kerja->where('column', 4)->where('index', 4)->first())
+                @php($content = $cara_kerja->where('column', 4)->where('index' ,4)->first())
                 <div class="col-md-3 col-12 ">
                     <div class="card">
                         <div class="card-body">
@@ -275,7 +293,7 @@
                                             <h1>4.</h1>
                                         </div>
                                         <div class="col-md-9 col-10 pl-0">
-                                            <h5>Kami Melapor Pajak</h5>
+                                            <h5>{{$title->title}}</h5>
                                         </div>
                                     </div>
                                 </div>
@@ -283,7 +301,7 @@
                             <div class="row">
                                 <div class="col-12">
                                     <hr class="w-25 bw-3 ml-0"/>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui. Sed et risus leo. Morbi pulvinar pellentesque lorem, id posuere libero ornare nec. Nullam et ante lacus. Vestibulum ullamcorper orci quis neque malesuada sodales. Fusce ex nulla, tempus non aliquet vitae, ullamcorper sit amet augue.
+                                    {{$content->content}}
                                 </div>
                             </div>
                         </div>

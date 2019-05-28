@@ -89,6 +89,14 @@ Route::prefix('admin')->group(function(){
     Route::post('/vouchers/update', 'Admin\VoucherController@update')->name('admin.vouchers.update');
     Route::post('/vouchers/delete', 'Admin\VoucherController@destroy')->name('admin.vouchers.destroy');
 
+    //Testimonial
+    Route::get('/testimonial', 'Admin\TestimonialDataController@index')->name('admin.testimonial.index');
+    Route::post('/testimonial/update', 'Admin\TestimonialDataController@update')->name('admin.testimonial.update');
+
+    //Cara Kerja
+    Route::get('/carakerja', 'Admin\CarakerjaDataController@index')->name('admin.carakerja.index');
+    Route::post('/carakerja/update', 'Admin\CarakerjaDataController@update')->name('admin.carakerja.update');
+    
     // Footer
     Route::get('/footer', 'Admin\FooterController@index')->name('admin.footer.index');
     Route::post('/footer/update', 'Admin\FooterController@update')->name('admin.footer.update');
