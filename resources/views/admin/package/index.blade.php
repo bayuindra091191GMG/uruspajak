@@ -11,7 +11,7 @@
             </div>
             <div class="row p-t-b-10 ">
                 <div class="col-12 text-right">
-                    <button type="button" class="btn btn-danger">CANCEL</button>
+{{--                    <button type="button" class="btn btn-danger">CANCEL</button>--}}
                     <button type="button" class="btn btn-success" onclick="submitForm();">SAVE</button>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                             <div class="row mb-2">
                                 <div class="col-12">
                                     <h3 class="float-left">PACKAGE 1 CONTENTS</h3>
-                                    <button type="button" class="btn btn-success float-right content-add" data-column="2">
+                                    <button type="button" class="btn btn-success float-right content-add" data-column="1">
                                         <i class="icon-plus"></i>
                                     </button>
                                 </div>
@@ -167,7 +167,7 @@
                             <div class="row mb-2">
                                 <div class="col-12">
                                     <h3 class="float-left">PACKAGE 3 CONTENTS</h3>
-                                    <button type="button" class="btn btn-success float-right content-add" data-column="2">
+                                    <button type="button" class="btn btn-success float-right content-add" data-column="3">
                                         <i class="icon-plus"></i>
                                     </button>
                                 </div>
@@ -230,19 +230,24 @@
                     <button type="button" class="close" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
-                    {{ Form::open(['route'=>['admin.footer.item.store'],'method' => 'post','id' => 'form_column_item_add']) }}
+                    {{ Form::open(['route'=>['admin.package.item.store'],'method' => 'post','id' => 'form_column_item_add']) }}
+
                     <div class="form-group">
-                        <label for="added_content" class="col-form-label">Content</label>
+                        <label for="added_content" class="col-form-label">Feature</label>
                         <input type="text" class="form-control" id="added_content" name="added_content">
-                    </div>
-                    <div class="form-group">
-                        <label for="added_link" class="col-form-label">Link</label>
-                        <input type="text" class="form-control" id="added_link" name="added_link">
                     </div>
                     <div class="form-group">
                         <label for="added_index" class="col-form-label">Index</label>
                         <input type="number" class="form-control" id="added_index" name="added_index">
                     </div>
+                    <div class="form-group">
+                        Feature Disabled
+                        <div class="material-switch float-right">
+                            <input id="added_feature_disabled" name="added_feature_disabled" value="1" type="checkbox"/>
+                            <label for="added_feature_disabled" class="bg-danger"></label>
+                        </div>
+                    </div>
+
                     <input type="hidden" id="added_column" name="added_column">
                     {{ Form::close() }}
 
@@ -266,18 +271,21 @@
                     <button type="button" class="close" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
-                    {{ Form::open(['route'=>['admin.footer.item.update'],'method' => 'post','id' => 'form_column_item_update']) }}
+                    {{ Form::open(['route'=>['admin.package.item.update'],'method' => 'post','id' => 'form_column_item_update']) }}
                     <div class="form-group">
-                        <label for="edited_content" class="col-form-label">Content</label>
+                        <label for="edited_content" class="col-form-label">Feature</label>
                         <input type="text" class="form-control" id="edited_content" name="edited_content">
-                    </div>
-                    <div class="form-group">
-                        <label for="edited_link" class="col-form-label">Link</label>
-                        <input type="text" class="form-control" id="edited_link" name="edited_link">
                     </div>
                     <div class="form-group">
                         <label for="edited_index" class="col-form-label">Index</label>
                         <input type="number" class="form-control" id="edited_index" name="edited_index">
+                    </div>
+                    <div class="form-group">
+                        Feature Disabled
+                        <div class="material-switch float-right">
+                            <input id="edited_feature_disabled" name="edited_feature_disabled" value="1" type="checkbox"/>
+                            <label for="edited_feature_disabled" class="bg-danger"></label>
+                        </div>
                     </div>
                     <input type="hidden" id="edited_id" name="edited_id">
                     {{ Form::close() }}
@@ -302,8 +310,8 @@
                     <button type="button" class="close" data-dismiss="modal">×</button>
                 </div>
                 <div class="modal-body">
-                    {{ Form::open(['route'=>['admin.footer.item.destroy'],'method' => 'post','id' => 'form_column_item_delete']) }}
-                    <h3>Are you sure you want to remove this content?</h3>
+                    {{ Form::open(['route'=>['admin.package.item.destroy'],'method' => 'post','id' => 'form_column_item_delete']) }}
+                    <h3>Are you sure you want to remove this feature?</h3>
                     <br/>
                     <input type="hidden" id="deleted_id" name="deleted_id"/>
                     {{ Form::close() }}
@@ -344,7 +352,10 @@
             let columnIdx = $(this).data('column');
             $('#added_column').val(columnIdx);
 
-            if(columnIdx === 2){
+            if(columnIdx === 1){
+                $('#added_index').val($('#column_1_auto_index').val());
+            }
+            else if(columnIdx === 2){
                 $('#added_index').val($('#column_2_auto_index').val());
             }
             else{
@@ -364,8 +375,15 @@
 
             $('#edited_id').val($(this).data('id'));
             $('#edited_content').val($(this).data('content'))
-            $('#edited_link').val($(this).data('link'));
             $('#edited_index').val($(this).data('index'));
+
+            if($(this).data('is-disabled') === 1){
+                $('#edited_feature_disabled').prop('checked', true);
+            }
+            else{
+                $('#edited_feature_disabled').prop('checked', false);
+            }
+
         });
 
         $('#editModal').on('click', '.update', function(){

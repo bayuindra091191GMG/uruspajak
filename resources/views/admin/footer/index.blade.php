@@ -11,7 +11,7 @@
             </div>
             <div class="row p-t-b-10 ">
                 <div class="col-12 text-right">
-                    <button type="button" class="btn btn-danger">CANCEL</button>
+{{--                    <button type="button" class="btn btn-danger">CANCEL</button>--}}
                     <button type="button" class="btn btn-success" onclick="submitForm();">SAVE</button>
                 </div>
             </div>

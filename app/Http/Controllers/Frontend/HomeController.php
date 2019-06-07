@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\PackageDatum;
 use App\Models\WpPost;
 use App\Models\WpPostmetum;
 use App\Models\TestimonialDatum;
@@ -36,12 +37,14 @@ class HomeController extends Controller
 
         $carakerjaData = carakerjaDatum::all();
         $content = carakerjaDatum::select('content')->where('column', 1)->where('index', 1)->first();
-        
+
         $data = [
             'testimonials' => $testimonialData,
             'cara_kerja' => $carakerjaData
         ];
         return view('frontend.home')->with($data);
+
+//        return view('frontend.home');
 
     }
 
@@ -111,11 +114,49 @@ class HomeController extends Controller
             return Redirect::route('frontend.form.final', $finalData);
         }
 
+        // Read package data
+        $packageData = PackageDatum::all();
+
+        $columnTitle1 = $packageData->where('field', 'package_1_title')
+            ->first();
+
+        $columnTitle2 = $packageData->where('field', 'package_2_title')
+            ->first();
+
+        $columnTitle3 = $packageData->where('field', 'package_3_title')
+            ->first();
+
+        $columnContent1 = PackageDatum::where('column', 1)
+            ->where('field', 'feature')
+            ->orderBy('index')
+            ->get();
+
+        $columnContent2 = PackageDatum::where('column', 2)
+            ->where('field', 'feature')
+            ->orderBy('index')
+            ->get();
+
+        $columnContent3 = PackageDatum::where('column', 3)
+            ->where('field', 'feature')
+            ->orderBy('index')
+            ->get();
+
+        $arrCount = array($columnContent1->count(), $columnContent2->count(), $columnContent3->count());
+        $maxCount = max($arrCount);
+//        dd($maxCount);
+
         $data = [
             'tax_report'            => $tax_report,
             'tax_report_option'     => $request->tax_report,
             'omzet'                 => $omzet,
-            'omzet_option'          => $request->omzet
+            'omzet_option'          => $request->omzet,
+            'columnTitle1'          => $columnTitle1->content,
+            'columnTitle2'          => $columnTitle2->content,
+            'columnTitle3'          => $columnTitle3->content,
+            'columnContent1'        => $columnContent1,
+            'columnContent2'        => $columnContent2,
+            'columnContent3'        => $columnContent3,
+            'maxCount'              => $maxCount
         ];
 
         return view('frontend.form-business.form-business-4')->with($data);

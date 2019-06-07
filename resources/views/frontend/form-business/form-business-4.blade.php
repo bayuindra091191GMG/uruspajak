@@ -56,9 +56,9 @@
                         <table class="table table-hover bg-custom-white">
                             <thead>
                             <tr>
-                                <th colspan="2" class="border bw-3 border-dark bg-custom-yellow h3 text-center" scope="col">Small</th>
-                                <th colspan="2" class="border bw-3 border-dark bg-custom-yellow h3 text-center" scope="col">Business</th>
-                                <th colspan="2" class="border bw-3 border-dark bg-custom-yellow h3 text-center" scope="col">Enterpreneur</th>
+                                <th colspan="2" class="border bw-3 border-dark bg-custom-yellow h3 text-center" scope="col">{{ $columnTitle1 }}</th>
+                                <th colspan="2" class="border bw-3 border-dark bg-custom-yellow h3 text-center" scope="col">{{ $columnTitle2 }}</th>
+                                <th colspan="2" class="border bw-3 border-dark bg-custom-yellow h3 text-center" scope="col">{{ $columnTitle3 }}</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -67,70 +67,70 @@
                                 <th class="border-right bw-3 border-dark h4 text-center text-custom-light-gray" colspan="2">Features</th>
                                 <th class="border-right bw-3 border-dark h4 text-center text-custom-light-gray" colspan="2">Features</th>
                             </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue" style="width: 10%"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark" style="width: 23%">Untuk penghasilan <1m</td>
-                                <td class="pr-0 text-right text-custom-dark-blue" style="width: 10%"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark" style="width: 24%">Untuk penghasilan <1m</td>
-                                <td class="pr-0 text-right text-custom-dark-blue" style="width: 10%"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark" style="width: 23%">Untuk penghasilan <1m</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Kode billing setoran</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Kode billing setoran</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Kode billing setoran</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Penyusunan & lapor SPT</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Penyusunan & lapor SPT</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Penyusunan & lapor SPT</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Google Analytics</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Google Analytics</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Google Analytics</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Email support</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Email support</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Email support</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">A/B testing</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">A/B testing</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">A/B testing</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-yellow"><i class="fas fa-times"></i></td>
-                                <td class="border-right bw-3 border-dark">Email account</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Email account</td>
-                                <td class="pr-0 text-right text-custom-yellow"><i class="fas fa-times"></i></td>
-                                <td class="border-right bw-3 border-dark">Email account</td>
-                            </tr>
-                            <tr>
-                                <td class="border-left bw-3 border-dark pr-0 text-right text-custom-yellow"><i class="fas fa-times"></i></td>
-                                <td class="border-right bw-3 border-dark">Custom Domain</td>
-                                <td class="pr-0 text-right text-custom-dark-blue"><i class="fas fa-check"></i></td>
-                                <td class="border-right bw-3 border-dark">Custom Domain</td>
-                                <td class="pr-0 text-right text-custom-yellow"><i class="fas fa-times"></i></td>
-                                <td class="border-right bw-3 border-dark">Custom Domain</td>
-                            </tr>
+                            @for($i = 0; $i < $maxCount; $i++)
+                                <tr>
+                                    @if(!empty($columnContent1[$i]))
+                                        @if($columnContent1[$i]->is_disabled === 1)
+                                            <td class="border-left bw-3 border-dark pr-0 text-right text-custom-yellow" style="width: 10%">
+                                                <i class="fas fa-times"></i>
+                                            </td>
+                                        @else
+                                            <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue" style="width: 10%">
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        @endif
+                                    @else
+                                        <td class="border-left bw-3 border-dark pr-0 text-right text-custom-dark-blue" style="width: 10%"></td>
+                                    @endif
+
+                                    <td class="border-right bw-3 border-dark" style="width: 23%">
+                                        @if(!empty($columnContent1[$i]))
+                                            {{ $columnContent1[$i]->content }}
+                                        @endif
+                                    </td>
+
+                                    @if(!empty($columnContent2[$i]))
+                                        @if($columnContent2[$i]->is_disabled === 1)
+                                            <td class="pr-0 text-right text-custom-yellow" style="width: 10%">
+                                                <i class="fas fa-times"></i>
+                                            </td>
+                                        @else
+                                            <td class="pr-0 text-right text-custom-dark-blue" style="width: 10%">
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        @endif
+                                    @else
+                                        <td class="pr-0 text-right text-custom-dark-blue" style="width: 10%"></td>
+                                    @endif
+
+                                    <td class="border-right bw-3 border-dark" style="width: 24%">
+                                        @if(!empty($columnContent2[$i]))
+                                            {{ $columnContent2[$i]->content }}
+                                        @endif
+                                    </td>
+
+                                    @if(!empty($columnContent3[$i]))
+                                        @if($columnContent3[$i]->is_disabled === 1)
+                                            <td class="pr-0 text-right text-custom-yellow" style="width: 10%">
+                                                <i class="fas fa-times"></i>
+                                            </td>
+
+                                        @else
+                                            <td class="pr-0 text-right text-custom-dark-blue" style="width: 10%">
+                                                <i class="fas fa-check"></i>
+                                            </td>
+                                        @endif
+                                    @else
+                                        <td class="pr-0 text-right text-custom-dark-blue" style="width: 10%"></td>
+                                    @endif
+
+                                    <td class="border-right bw-3 border-dark" style="width: 23%">
+                                        @if(!empty($columnContent3[$i]))
+                                            {{ $columnContent3[$i]->content }}
+                                        @endif
+                                    </td>
+                                </tr>
+                            @endfor
                             <tr>
                                 <td colspan="2" class="border-bottom border-left border-right bw-3 border-dark text-center">
                                     <a href="{{ route('frontend.form.final',

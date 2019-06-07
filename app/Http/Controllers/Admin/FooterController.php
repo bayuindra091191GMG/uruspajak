@@ -154,7 +154,7 @@ class FooterController extends Controller
         $instagramLink->link = $request->input('instagram') ?? "";
         $instagramLink->save();
 
-        Session::flash('success', 'Successfully update footer');
+        Session::flash('success', 'Successfully updated footer data');
         return redirect()->route('admin.footer.index');
     }
 
@@ -190,7 +190,7 @@ class FooterController extends Controller
             'link'          => $request->input('added_linkt') ?? "",
         ]);
 
-        Session::flash('success', 'Successfully added new column 2 item');
+        Session::flash('success', 'Successfully added new footer item');
         return redirect()->route('admin.footer.index');
     }
 
@@ -253,7 +253,7 @@ class FooterController extends Controller
         }
         $editedColumnItem->save();
 
-        Session::flash('success', 'Successfully updated new column 2 item');
+        Session::flash('success', 'Successfully updated footer item');
         return redirect()->route('admin.footer.index');
     }
 
@@ -274,7 +274,7 @@ class FooterController extends Controller
 
         $deletedColumnItem->delete();
 
-        Session::flash('success', 'Successfully removed a column item');
+        Session::flash('success', 'Successfully removed a footer item');
         return redirect()->route('admin.footer.index');
     }
 }
