@@ -37,11 +37,54 @@ class HomeController extends Controller
 
         $carakerjaData = carakerjaDatum::all();
         $content = carakerjaDatum::select('content')->where('column', 1)->where('index', 1)->first();
+        $content1 = $testimonialData->where('column', 1)->where('index', 1)->first();
+        $name = $testimonialData->where('column', 1)->where('index', 2)->first();
+        $name2 = $testimonialData->where('column', 1)->where('index', 3)->first();
+        $content2 = $testimonialData->where('column', 2)->where('index', 5)->first();
+        $name3 = $testimonialData->where('column', 2)->where('index', 6)->first();
+        $name4 = $testimonialData->where('column', 2)->where('index', 7)->first();
+        $content3 = $testimonialData->where('column', 3)->where('index', 9)->first();
+        $name5 = $testimonialData->where('column', 3)->where('index', 10)->first();
+        $name6 = $testimonialData->where('column', 3)->where('index', 11)->first();
+        $content4 = $testimonialData->where('column', 4)->where('index', 13)->first();
+        $name7 = $testimonialData->where('column', 4)->where('index', 14)->first();
+        $name8 = $testimonialData->where('column', 4)->where('index', 15)->first();
+        $title1 = $carakerjaData->where('column', 1)->where('index', 1)->first();
+        $content_kerja1 = $carakerjaData->where('column', 1)->where('index', 1)->first();
+        $title2 = $carakerjaData->where('column', 2)->where('index', 2)->first();
+        $content_kerja2 = $carakerjaData->where('column', 2)->where('index', 2)->first();
+        $title3 = $carakerjaData->where('column', 3)->where('index', 3)->first();
+        $content_kerja3 = $carakerjaData->where('column', 3)->where('index', 3)->first();
+        $title4 = $carakerjaData->where('column', 4)->where('index', 4)->first();
+        $content_kerja4 = $carakerjaData->where('column', 4)->where('index', 4)->first();
+
 
         $data = [
             'testimonials' => $testimonialData,
-            'cara_kerja' => $carakerjaData
+            'cara_kerja' => $carakerjaData,
+            'content1' => $content1,
+            'name' => $name,
+            'name2' => $name2,
+            'content2' => $content2,
+            'name3' => $name3,
+            'name4' => $name4,
+            'content3' => $content3,
+            'name5' => $name5,
+            'name6' => $name6,
+            'content4' => $content4,
+            'name7' => $name7,
+            'name8' => $name8,
+            'title1' => $title1,
+            'content_kerja1' => $content_kerja1,
+            'title2' => $title2,
+            'content_kerja2' => $content_kerja2,
+            'title3' => $title3,
+            'content_kerja3' => $content_kerja3,
+            'title4' => $title4,
+            'content_kerja4' => $content_kerja4,
         ];
+
+        
         return view('frontend.home')->with($data);
 
 //        return view('frontend.home');

@@ -46,8 +46,8 @@
                                         <tr class="text-center">
                                             <th style="width: 5%;">Index</th>
                                             <th style="width: 10%;">Title</th>
-                                            <th style="width: 70%;">Cara Kerja</th>
-                                            <th style="width: 5%;">Checklist</th>
+                                            <th style="width: 75%;">Cara Kerja</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
                                             <th style="width: 10%;">Action</th>
                                         </tr>
                                         @foreach($carakerjaData1 as $content)
@@ -55,13 +55,13 @@
                                                 <td class="text-center">{{ $content->index }}</td>
                                                 <td>{{ $content->title }}</td>
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
@@ -103,8 +103,8 @@
                                         <tr class="text-center">
                                             <th style="width: 5%;">Index</th>
                                             <th style="width: 10%;">Title</th>
-                                            <th style="width: 70%;">Cara Kerja</th>
-                                            <th style="width: 5%;">Checklist</th>
+                                            <th style="width: 75%;">Cara Kerja</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
                                             <th style="width: 10%;">Action</th>
                                         </tr>
                                         @foreach($carakerjaData2 as $content)
@@ -112,13 +112,13 @@
                                                 <td class="text-center">{{ $content->index }}</td>
                                                 <td>{{ $content->title }}</td>
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
@@ -163,8 +163,8 @@
                                         <tr class="text-center">
                                             <th style="width: 5%;">Index</th>
                                             <th style="width: 10%;">Title</th>
-                                            <th style="width: 70%;">Cara Kerja</th>
-                                            <th style="width: 5%;">Checklist</th>
+                                            <th style="width: 75%;">Cara Kerja</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
                                             <th style="width: 10%;">Action</th>
                                         </tr>
                                         @foreach($carakerjaData3 as $content)
@@ -172,13 +172,13 @@
                                                 <td class="text-center">{{ $content->index }}</td>
                                                 <td>{{ $content->title }}</td>
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
@@ -220,8 +220,8 @@
                                         <tr class="text-center">
                                             <th style="width: 5%;">Index</th>
                                             <th style="width: 10%;">Title</th>
-                                            <th style="width: 70%;">Cara Kerja</th>
-                                            <th style="width: 5%;">Checklist</th>
+                                            <th style="width: 75%;">Cara Kerja</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
                                             <th style="width: 10%;">Action</th>
                                         </tr>
                                         @foreach($carakerjaData4 as $content)
@@ -229,13 +229,13 @@
                                                 <td class="text-center">{{ $content->index }}</td>
                                                 <td>{{ $content->title }}</td>
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
@@ -321,10 +321,10 @@
                         <label for="edited_content" class="col-form-label">Content</label>
                         <textarea class="form-control" id="edited_content" name="edited_content" rows="8"></textarea>   
                     </div>
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="edited_index" class="col-form-label">Index</label>
                         <input type="number" class="form-control" id="edited_index" name="edited_index" readonly>
-                    </div>
+                    </div> --}}
                     <input type="hidden" id="edited_id" name="edited_id">
                     {{ Form::close() }}
 
