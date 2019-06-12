@@ -40,6 +40,10 @@ Route::prefix('admin')->group(function(){
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/logout', 'Auth\AdminLoginController@logout')->name('admin.logout');
 
+    // Setting
+    Route::get('/setting', 'Admin\SettingController@index')->name('admin.setting');
+    Route::post('/setting/update', 'Admin\SettingController@update')->name('admin.setting.update');
+
     // Contact Message
     Route::get('/contact-messages', 'Admin\ContactMessageController@index')->name('admin.contact-messages.index');
 

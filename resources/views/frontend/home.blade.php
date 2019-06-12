@@ -91,8 +91,8 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <h4>{{$name1->content}}</h4>
-                                    <span>{{$name2->content}}</span>
+                                    <h4>{{$content1->name1}}</h4>
+                                    <span>{{$content1->name2}}</span>
                                 </div>
                             </div>
                         </div>
@@ -112,8 +112,8 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h4>{{$name3->content}}</h4>
-                            <span>{{$name4->content}}</span>
+                            <h4>{{$content2->name1}}</h4>
+                            <span>{{$content2->name2}}</span>
                         </div>
                     </div>
                 </div>
@@ -133,8 +133,8 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h4>{{$name5->content}}</h4>
-                            <span>{{$name6->content}}</span>
+                            <h4>{{$content3->name1}}</h4>
+                            <span>{{$content3->name2}}</span>
                         </div>
                     </div>
                 </div>
@@ -154,8 +154,8 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <h4>{{$name7->content}}</h4>
-                            <span>{{$name8->content}}</span>
+                            <h4>{{$content4->name1}}</h4>
+                            <span>{{$content4->name2}}</span>
                         </div>
                     </div>
                 </div>

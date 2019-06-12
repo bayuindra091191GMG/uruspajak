@@ -33,22 +33,36 @@ class HomeController extends Controller
     public function index()
     {
         $testimonialData = testimonialDatum::all();
-        $content = testimonialDatum::select('content')->where('column', 1)->where('index', 1)->first();
+//        $content = testimonialDatum::select('content')->where('column', 1)->where('index', 1)->first();
 
         $carakerjaData = carakerjaDatum::all();
-        $content = carakerjaDatum::select('content')->where('column', 1)->where('index', 1)->first();
+//        $content = carakerjaDatum::select('content')->where('column', 1)->where('index', 1)->first();
+//        $content1 = $testimonialData->where('column', 1)->where('index', 1)->first();
+//        $name1 = $testimonialData->where('column', 1)->where('index', 1)->first();
+//        $name2 = $testimonialData->where('column', 1)->where('index', 1)->first();
+//        $content2 = $testimonialData->where('column', 2)->where('index', 2)->first();
+//        $name3 = $testimonialData->where('column', 2)->where('index', 2)->first();
+//        $name4 = $testimonialData->where('column', 2)->where('index', 2)->first();
+//        $content3 = $testimonialData->where('column', 3)->where('index', 3)->first();
+//        $name5 = $testimonialData->where('column', 3)->where('index', 3)->first();
+//        $name6 = $testimonialData->where('column', 3)->where('index', 3)->first();
+//        $content4 = $testimonialData->where('column', 4)->where('index', 4)->first();
+//        $name7 = $testimonialData->where('column', 4)->where('index', 4)->first();
+//        $name8 = $testimonialData->where('column', 4)->where('index', 4)->first();
+//        $title1 = $carakerjaData->where('column', 1)->where('index', 1)->first();
+//        $content_kerja1 = $carakerjaData->where('column', 1)->where('index', 1)->first();
+//        $title2 = $carakerjaData->where('column', 2)->where('index', 2)->first();
+//        $content_kerja2 = $carakerjaData->where('column', 2)->where('index', 2)->first();
+//        $title3 = $carakerjaData->where('column', 3)->where('index', 3)->first();
+//        $content_kerja3 = $carakerjaData->where('column', 3)->where('index', 3)->first();
+//        $title4 = $carakerjaData->where('column', 4)->where('index', 4)->first();
+//        $content_kerja4 = $carakerjaData->where('column', 4)->where('index', 4)->first();
+
         $content1 = $testimonialData->where('column', 1)->where('index', 1)->first();
-        $name1 = $testimonialData->where('column', 1)->where('index', 1)->first();
-        $name2 = $testimonialData->where('column', 1)->where('index', 1)->first();
         $content2 = $testimonialData->where('column', 2)->where('index', 2)->first();
-        $name3 = $testimonialData->where('column', 2)->where('index', 2)->first();
-        $name4 = $testimonialData->where('column', 2)->where('index', 2)->first();
         $content3 = $testimonialData->where('column', 3)->where('index', 3)->first();
-        $name5 = $testimonialData->where('column', 3)->where('index', 3)->first();
-        $name6 = $testimonialData->where('column', 3)->where('index', 3)->first();
         $content4 = $testimonialData->where('column', 4)->where('index', 4)->first();
-        $name7 = $testimonialData->where('column', 4)->where('index', 4)->first();
-        $name8 = $testimonialData->where('column', 4)->where('index', 4)->first();
+
         $title1 = $carakerjaData->where('column', 1)->where('index', 1)->first();
         $content_kerja1 = $carakerjaData->where('column', 1)->where('index', 1)->first();
         $title2 = $carakerjaData->where('column', 2)->where('index', 2)->first();
@@ -63,17 +77,9 @@ class HomeController extends Controller
             'testimonials' => $testimonialData,
             'cara_kerja' => $carakerjaData,
             'content1' => $content1,
-            'name1' => $name1,
-            'name2' => $name2,
             'content2' => $content2,
-            'name3' => $name3,
-            'name4' => $name4,
             'content3' => $content3,
-            'name5' => $name5,
-            'name6' => $name6,
             'content4' => $content4,
-            'name7' => $name7,
-            'name8' => $name8,
             'title1' => $title1,
             'content_kerja1' => $content_kerja1,
             'title2' => $title2,
