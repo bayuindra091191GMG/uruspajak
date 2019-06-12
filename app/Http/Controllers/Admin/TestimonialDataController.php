@@ -52,7 +52,6 @@ class TestimonialDataController extends Controller
         
         $columnContent8 = $testimonialData->where('column', 4)
             ->where('field', 'name1');
-
         // $column1AutoIndex = $columnContent1->count() + 1;
         // $column2AutoIndex = $columnContent2->count() + 1;
         // $column3AutoIndex = $columnContent3->count() + 1;
@@ -88,6 +87,8 @@ class TestimonialDataController extends Controller
         $editedColumnItem = testimonialDatum::find($request->input('edited_id'));
         $editedColumnItemBefore = $editedColumnItem;
         $editedColumnItem->content = $request->input('edited_content') ?? "";
+        $editedColumnItem->name1 = $request->input('edited_name1') ?? "";
+        $editedColumnItem->name2 = $request->input('edited_name2') ?? "";
         
         $editedColumnItem->save();
         

@@ -91,7 +91,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <h4>{{$name->content}}</h4>
+                                    <h4>{{$name1->content}}</h4>
                                     <span>{{$name2->content}}</span>
                                 </div>
                             </div>
