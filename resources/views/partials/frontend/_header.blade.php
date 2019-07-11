@@ -12,8 +12,9 @@
                         <li><a href="{{ route('home') }}" class="p-2">Home</a></li>
                         <li><a href="#" class="p-2">About</a></li>
                         <li><a href="#" class="p-2">Contact</a></li>
-                        <li class="d-block d-sm-none"><a href="#" class="p-2">Take a Test Drive</a></li>
-                        <li class="d-none d-sm-block"><a href="#" class="btn btn-default p-2 border-custom-yellow text-custom-dark-blue">Take a Test Drive</a></li>
+                        <li><a href="http://blog.uruspajak.id" class="p-2">Blog</a></li>
+{{--                        <li class="d-block d-sm-none"><a href="#" class="p-2">Take a Test Drive</a></li>--}}
+{{--                        <li class="d-none d-sm-block"><a href="#" class="btn btn-default p-2 border-custom-yellow text-custom-dark-blue">Take a Test Drive</a></li>--}}
                     </ul>
                 </nav><!-- #nav-menu-container -->
             </div>

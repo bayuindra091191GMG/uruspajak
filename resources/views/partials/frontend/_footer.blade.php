@@ -58,6 +58,10 @@
                         <i class="fab fa-instagram fa-2x"></i>
                     </a>
                     &nbsp;&nbsp;
+                    <a href="https://wa.me/6283879898080">
+                        <i class="fab fa-whatsapp fa-2x"></i>
+                    </a>
+                    &nbsp;&nbsp;
                 </div>
             </div>
         </div>
