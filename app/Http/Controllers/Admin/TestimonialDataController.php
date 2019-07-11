@@ -17,17 +17,17 @@ class TestimonialDataController extends Controller
         $testimonialData3 = testimonialDatum::where('column', 3)->get();
         $testimonialData4 = testimonialDatum::where('column', 4)->get();
 
-        $columnTitle1 = $testimonialData->where('field', 'testimonial_1_title')
-            ->first();
+        // $columnTitle1 = $testimonialData->where('field', 'testimonial_1_title')
+        //     ->first();
 
-        $columnTitle2 = $testimonialData->where('field', 'testimonial_2_title')
-            ->first();
+        // $columnTitle2 = $testimonialData->where('field', 'testimonial_2_title')
+        //     ->first();
 
-        $columnTitle3 = $testimonialData->where('field', 'testimonial_3_title')
-            ->first();
+        // $columnTitle3 = $testimonialData->where('field', 'testimonial_3_title')
+        //     ->first();
         
-        $columnTitle4 = $testimonialData->where('field', 'testimonial_4_title')
-            ->first();
+        // $columnTitle4 = $testimonialData->where('field', 'testimonial_4_title')
+        //     ->first();
 
         $columnContent1 = $testimonialData->where('column', 1)
             ->where('field', 'feature');
@@ -52,7 +52,6 @@ class TestimonialDataController extends Controller
         
         $columnContent8 = $testimonialData->where('column', 4)
             ->where('field', 'name1');
-
         // $column1AutoIndex = $columnContent1->count() + 1;
         // $column2AutoIndex = $columnContent2->count() + 1;
         // $column3AutoIndex = $columnContent3->count() + 1;
@@ -63,10 +62,10 @@ class TestimonialDataController extends Controller
             'testimonialData2'      => $testimonialData2,
             'testimonialData3'      => $testimonialData3,
             'testimonialData4'      => $testimonialData4,
-            'columnTitle1'      => $columnTitle1->content,
-            'columnTitle2'      => $columnTitle2->content,
-            'columnTitle3'      => $columnTitle3->content,
-            'columnTitle4'      => $columnTitle4->content,
+            // 'columnTitle1'      => $columnTitle1->content,
+            // 'columnTitle2'      => $columnTitle2->content,
+            // 'columnTitle3'      => $columnTitle3->content,
+            // 'columnTitle4'      => $columnTitle4->content,
             'columnContent1'    => $columnContent1,
             'columnContent2'    => $columnContent2,
             'columnContent3'    => $columnContent3,
@@ -88,6 +87,8 @@ class TestimonialDataController extends Controller
         $editedColumnItem = testimonialDatum::find($request->input('edited_id'));
         $editedColumnItemBefore = $editedColumnItem;
         $editedColumnItem->content = $request->input('edited_content') ?? "";
+        $editedColumnItem->name1 = $request->input('edited_name1') ?? "";
+        $editedColumnItem->name2 = $request->input('edited_name2') ?? "";
         
         $editedColumnItem->save();
         

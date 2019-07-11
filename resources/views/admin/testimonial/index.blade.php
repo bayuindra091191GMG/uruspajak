@@ -43,28 +43,34 @@
                                 <div class="col-12">
                                     <table class="table table-bordered">
                                         <tbody>
-                                         <tr class="text-center">
-                                            <th style="width: 5%;">Index</th>
-                                            <th style="width: 80%;">Testimonial</th>
-                                            <th style="width: 5%;">Checklist</th>
-                                            <th style="width: 10%;">Action</th>
+                                        <tr class="text-center">
+                                            {{-- <th style="width: 5%;">Index</th> --}}
+                                            <th style="width: 65%;">Content</th>
+                                            <th style="width: 15%;">Name1</th>
+                                            <th style="width: 15%;">Name2</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
+                                            <th style="width: 5%;">Action</th>
                                         </tr>
                                         @foreach($testimonialData1 as $content)
                                             <tr>
-                                                <td class="text-center">{{ $content->index }}</td>
+                                                {{-- <td class="text-center">{{ $content->index }}</td> --}}
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                <td>{{ $content->name1 }}</td>
+                                                <td>{{ $content->name2 }}</td>
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
                                                             data-index="{{ $content->index }}"
                                                             data-content="{{ $content->content ?? "" }}"
+                                                            data-name1="{{ $content->name1 ?? "" }}"
+                                                            data-name2="{{ $content->name2 ?? "" }}"
                                                             data-is-disabled="{{ $content->is_disabled }}">
                                                         <i class="icon-edit"></i>
                                                     </button>
@@ -97,28 +103,34 @@
                                 <div class="col-12">
                                     <table class="table table-bordered">
                                         <tbody>
-                                         <tr class="text-center">
-                                            <th style="width: 5%;">Index</th>
-                                            <th style="width: 80%;">Testimonial</th>
-                                            <th style="width: 5%;">Checklist</th>
-                                            <th style="width: 10%;">Action</th>
+                                        <tr class="text-center">
+                                            {{-- <th style="width: 5%;">Index</th> --}}
+                                            <th style="width: 65%;">Content</th>
+                                            <th style="width: 15%;">Name1</th>
+                                            <th style="width: 15%;">Name2</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
+                                            <th style="width: 5%;">Action</th>
                                         </tr>
                                         @foreach($testimonialData2 as $content)
                                             <tr>
-                                                <td class="text-center">{{ $content->index }}</td>
+                                                {{-- <td class="text-center">{{ $content->index }}</td> --}}
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                <td>{{ $content->name1 }}</td>
+                                                <td>{{ $content->name2 }}</td>
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
                                                             data-index="{{ $content->index }}"
                                                             data-content="{{ $content->content ?? "" }}"
+                                                            data-name1="{{ $content->name1 ?? "" }}"
+                                                            data-name2="{{ $content->name2 ?? "" }}"
                                                             data-is-disabled="{{ $content->is_disabled }}">
                                                         <i class="icon-edit"></i>
                                                     </button>
@@ -155,27 +167,33 @@
                                     <table class="table table-bordered">
                                         <tbody>
                                         <tr class="text-center">
-                                            <th style="width: 5%;">Index</th>
-                                            <th style="width: 80%;">Testimonial</th>
-                                            <th style="width: 5%;">Checklist</th>
-                                            <th style="width: 10%;">Action</th>
+                                            {{-- <th style="width: 5%;">Index</th> --}}
+                                            <th style="width: 65%;">Content</th>
+                                            <th style="width: 15%;">Name1</th>
+                                            <th style="width: 15%;">Name2</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
+                                            <th style="width: 5%;">Action</th>
                                         </tr>
                                         @foreach($testimonialData3 as $content)
                                             <tr>
-                                                <td class="text-center">{{ $content->index }}</td>
+                                                {{-- <td class="text-center">{{ $content->index }}</td> --}}
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                <td>{{ $content->name1 }}</td>
+                                                <td>{{ $content->name2 }}</td>
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
                                                             data-index="{{ $content->index }}"
                                                             data-content="{{ $content->content ?? "" }}"
+                                                            data-name1="{{ $content->name1 ?? "" }}"
+                                                            data-name2="{{ $content->name2 ?? "" }}"
                                                             data-is-disabled="{{ $content->is_disabled }}">
                                                         <i class="icon-edit"></i>
                                                     </button>
@@ -209,28 +227,33 @@
                                     <table class="table table-bordered">
                                         <tbody>
                                         <tr class="text-center">
-                                            <th style="width: 5%;">Index</th>
-                                            <th style="width: 80%;">Testimonial</th>
-                                            <th style="width: 5%;">Checklist</th>
-                                            <th style="width: 10%;">Action</th>
+                                            {{-- <th style="width: 5%;">Index</th> --}}
+                                            <th style="width: 65%;">Content</th>
+                                            <th style="width: 15%;">Name1</th>
+                                            <th style="width: 15%;">Name2</th>
+                                            {{-- <th style="width: 5%;">Checklist</th> --}}
+                                            <th style="width: 5%;">Action</th>
                                         </tr>
                                         @foreach($testimonialData4 as $content)
                                             <tr>
-                                                <td class="text-center">{{ $content->index }}</td>
+                                                {{-- <td class="text-center">{{ $content->index }}</td> --}}
                                                 <td>{{ $content->content }}</td>
-                                                <td class="text-center">
+                                                <td>{{ $content->name1 }}</td>
+                                                <td>{{ $content->name2 }}</td>
+                                                {{-- <td class="text-center">
                                                     @if($content->is_disabled === 0)
                                                         <i class="fas fa-check" style="color: #555891 !important;"></i>
                                                     @else
                                                         <i class="fas fa-times" style="color: #F5D74C !important;"></i>
                                                     @endif
-                                                </td>
+                                                </td> --}}
                                                 <td class="text-center">
                                                     <button type="button" class="btn btn-primary content-edit"
                                                             data-id="{{ $content->id }}"
                                                             data-index="{{ $content->index }}"
                                                             data-content="{{ $content->content ?? "" }}"
-                                                            data-field="{{ $content->field ?? "" }}"
+                                                            data-name1="{{ $content->name1 ?? "" }}"
+                                                            data-name2="{{ $content->name2 ?? "" }}"
                                                             data-is-disabled="{{ $content->is_disabled }}">
                                                         <i class="icon-edit"></i>
                                                     </button>
@@ -305,12 +328,20 @@
                     <div class="form-group">
 
                         <label for="edited_content" class="col-form-label">Content</label>
-                        <textarea class="form-control" id="edited_content" name="edited_content" rows="9"></textarea>   
+                        <textarea class="form-control" id="edited_content" name="edited_content" rows="6"></textarea>   
                     </div>
                     <div class="form-group">
+                        <label for="edited_content" class="col-form-label">Name1</label>
+                        <textarea class="form-control" id="edited_name1" name="edited_name1" rows="2"></textarea>   
+                    </div>
+                    <div class="form-group">
+                        <label for="edited_content" class="col-form-label">Name2</label>
+                        <textarea class="form-control" id="edited_name2" name="edited_name2" rows="2"></textarea>   
+                    </div>
+                    {{-- <div class="form-group">
                         <label for="edited_index" class="col-form-label">Index</label>
                         <input type="number" class="form-control" id="edited_index" name="edited_index" readonly>
-                    </div>
+                    </div> --}}
                     <input type="hidden" id="edited_id" name="edited_id">
                     {{ Form::close() }}
 
@@ -396,6 +427,8 @@
 
             $('#edited_id').val($(this).data('id'));
             $('#edited_content').val($(this).data('content'))
+            $('#edited_name1').val($(this).data('name1'))
+            $('#edited_name2').val($(this).data('name2'))
             $('#edited_index').val($(this).data('index'));
         });
 
