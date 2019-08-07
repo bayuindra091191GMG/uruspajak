@@ -20,7 +20,7 @@
                             <div style="height: 350px;">
                                 <div class="box h-100 d-flex justify-content-center flex-column margin-center">
                                     <h1 class="text-custom-yellow">Business.</h1>
-                                    <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                    <p class="text-custom-white">UrusPajak akan menjadi solusi Perpajakan dan layanan lainnya untuk Perusahaan Anda yang sedang berkembang.</p>
                                     <a href="{{ route('frontend.form.business.2') }}" class="btn btn-primary w-75 p-1 bg-custom-yellow bw-2 border-dark text-custom-black">Pick your plan</a>
                                 </div>
                             </div>
@@ -38,7 +38,7 @@
                             <div style="height: 350px;">
                                 <div class="box h-100 d-flex justify-content-center flex-column margin-center">
                                     <h1 class="text-custom-dark-blue">Individual.</h1>
-                                    <p class="text-custom-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                    <p class="text-custom-black">UrusPajak akan menjadi solusi Perpajakan Pribadi Anda dengan berbagai profesi seperti karyawan, freelancer maupun pengusaha.</p>
                                     <a href="{{ route('frontend.form.individual.2') }}" class="btn btn-primary w-75 p-1 bg-custom-dark-blue bw-2 border-dark text-custom-white">Pick your plan</a>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
             <div class="row d-flex justify-content-center">
                 <div class="menu-content col-lg-7">
                     <div class="title text-center">
-                        <span>Hi, We're Uruspajak</span><br/>
+                        <span>Hi, Kami adalah UrusPajak</span><br/>
                         <h1 class="mb-10">Lapor Pajak Pribadi.</h1>
                         <h1 class="mb-10">Mulai dari 100rb Selesai 1 hari.</h1>
                     </div>
@@ -74,7 +74,7 @@
     <section class="mb-5 font-weight-light text-italic">
         <div class="container">
             <div class="row">
-                
+
                 {{-- @php($content = $testimonials->where('column', 1)->where('index', 1)->first()) --}}
                 {{-- @php($name = $testimonials->where('column', 1)->where('index', 2)->first()) --}}
                 {{-- @php($name2 = $testimonials->where('column', 1)->where('index', 3)->first()) --}}
@@ -326,8 +326,8 @@
                                 <div class="col-md-6 col-12">
                                     <div style="height: 265px;">
                                         <div class="box h-100 w-75 d-flex justify-content-center flex-column margin-center">
-                                            <h1 class="text-custom-yellow">Want a Bite?</h1>
-                                            <p class="text-custom-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
+                                            <h1 class="text-custom-yellow">"Kami UrusPajak Anda, Anda urus bisnisnya"</h1>
+                                            <p class="text-custom-white"></p>
                                             <a href="#" class="btn btn-primary width-home-button-responsive p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Take a test drive</a>
                                         </div>
                                     </div>
@@ -356,8 +356,8 @@
                                     <div id="section_tax_consultation">
                                         <div class="box h-100 w-75 d-flex justify-content-center flex-column margin-center">
                                             <h1 class="text-custom-dark-blue">Mau Konsultasi Pajak?</h1>
-                                            <p class="text-custom-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque luctus arcu in urna mattis, in viverra magna posuere. Morbi eu mollis dui.</p>
-                                            <a href="#" class="btn btn-primary width-home-button-responsive p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Hubungi Kami</a>
+                                            <p class="text-custom-black">UrusPajak akan dengan senang hati membantu semua kebutuhan perpajakan Anda. Silakan hubungi kami.</p>
+                                            <a href="https://wa.me/6283879898080" class="btn btn-primary width-home-button-responsive p-2 bg-custom-white bw-2 border-dark text-custom-black" style="border-radius: 10px;">Hubungi Kami</a>
                                         </div>
                                     </div>
                                 </div>

@@ -10,7 +10,7 @@
                 <nav id="nav-menu-container">
                     <ul class="nav-menu">
                         <li><a href="{{ route('home') }}" class="p-2">Home</a></li>
-                        <li><a href="#" class="p-2">About</a></li>
+                        <li><a href="{{ route('frontend.form.business.1') }}" class="p-2">Proposal</a></li>
                         <li><a href="#" class="p-2">Contact</a></li>
                         <li><a href="http://blog.uruspajak.id" class="p-2">Blog</a></li>
 {{--                        <li class="d-block d-sm-none"><a href="#" class="p-2">Take a Test Drive</a></li>--}}
